@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Tajawal, sans-serif;
+}
+
+.background {
+    padding: 0.5%;
+    margin: 0 auto auto;
+    top: 0;
+    left: 5%;
+    width: 80%;
+    height: 100%;
+    
+}
+
+.text--logo {
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    float: left;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+
+}
+.logo {
+    height: 22px;
+    width: 30px;
+    padding: 15px 2px 0 30px;
+}
+.menuBar {
+    background-image: linear-gradient(#A258B8, white);
+    overflow: hidden;
+    height: 60px;
+    position: relative;
+    display: flex;
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.landing_image
+{
+  
+   margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    right: 60px;
+    left: 10px;
+    overflow: hidden;
+    
+}
+.start_button{
+    
+    align-content: center;
+    height: 50%;
+    width: 50%;
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    padding: 0 12px;
+    border:none;
+  
+}
+.view_start_button{
+    
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    align-content: center;
+    font-family: "Tajawal", sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15%;
+    font-size: 45px;
+    border:none;
+    text-decoration: none;
+    width: 249px;
+    height: 100px;
+    margin-top: 300px;
+
+    
+
+}
+
+.container_button_start{
+    
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    text-align: center;
+    position: relative;
+    padding-top: 5px; 
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+    top: 200px;
+    right: 200px;
+    
+    
+ 
+    
+}
+
+.container_image{
+    background-image: url("background_purp.png");
+    height: 600px;
+    width:1100px;
+    position: relative;
+    left: 100px;
+    top: 40px;
+}
+.container {
+  
+    
+ 
+    height: 800px;
+    width: 1200px;
+    position: relative;
+}
+
+.container_text{
+
+    font-family: "Tajawal", sans-serif;
+    text-align:center;
+    position: relative;
+    background-color: white;
+    color: #A258B8;
+    font-size:30px;
+    margin-bottom: 150px;
+
+}
