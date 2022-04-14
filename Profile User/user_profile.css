@@ -1,45 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Tajawal, sans-serif;
 }
 
 .background {
-    margin: auto;
     padding: 0.5%;
-    margin-top: 0%;
+    margin: 0 auto auto;
     top: 0;
     left: 5%;
     width: 80%;
     height: 100%;
 }
 
+.text--logo {
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    float: left;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+
+}
+
 .menuBar {
     background-image: linear-gradient(#A258B8, white);
     overflow: hidden;
     height: 60px;
+    position: relative;
     display: flex;
-    /*position: -webkit-sticky;
-    position: sticky;
-    top: 0%;
-    left: 5%;
-    padding: 0.5%;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-self: center;
-    justify-content: space-evenly;
-    background-color: #ad7b66;
-    align-items: center;*/
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
 }
 
 .menuButton {
-    /*color: white;
-    font-family: 'Poppins';
-    font-size: 120%;
-    text-decoration: none;*/
-
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -49,23 +49,9 @@ body {
 }
 
 .menuButton:hover {
-    /*background-color: #dab09b;
-    border-radius: 16px;
-    padding-right: 2%;
-    padding-left: 2%;
-    margin-left: -2%;
-    margin-right: -2%;*/
-
-    background-color: #ddd;
-    color: black;
-}
-/*
-.menuButton.active{
-    background-color: #04AA6D;
+    background-image: linear-gradient(#784087, white);
     color: white;
 }
-*/
-
 
 input[type=text], select, textarea {
     width: 100%; /* Full width */
@@ -116,6 +102,14 @@ input[type=submit] {
     -moz-box-sizing: content-box;
 }
 
+.text--notifications {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+    padding-bottom: 40px;
+}
+
 label {
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
@@ -134,11 +128,12 @@ input.b[type=submit]:hover {
     padding: 1%;
 }
 
-/* Create two columns that float next to eachother */
+/* Create two columns that float next to each other */
 
 .column {
     float: left;
     width: 50%;
+    padding-top: 5%;
 }
 
 /* Clear floats after the columns */
@@ -148,15 +143,81 @@ input.b[type=submit]:hover {
     clear: both;
 }
 
+.logo {
+    height: 22px;
+    width: 30px;
+    padding: 15px 2px 0 30px;
+
+}
+
+::placeholder {
+    font-family: "Tajawal", sans-serif;
+    color: grey;
+    font-size: 12px;
+}
+
+/* styling search bar */
+input[type=search] {
+    font-family: "Tajawal", sans-serif;
+    color: rgba(0,0,0,0.94);
+    font-size: 12px;
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */
+    border: 1px solid #A258B8; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: content-box; /* How long are the boxes*/
+    margin-top: 10px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.search {
+    height: 90%;
+    float: right;
+    width: 45%;
+    padding-left: 5px;
+    padding-top: 0;
+    display: flex;
+}
+
+.search__icon {
+    height: 20px;
+    width: 20px;
+    padding: 14px 2px 0 0;
+    margin-left: -25px;
+    border-radius: 5px;
+}
+
+.menu__icon {
+    height: 27px;
+    width: 23px;
+    padding: 10px 2px 0 5px;
+    border-radius: 5px;
+}
+
+.profile-account {
+
+    height: 40%;
+    width: 2%;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid #A258B8;
+    margin-top: 10px;
+    float: right;
+    position: sticky;
+    right: 0%;
+    display: flex;
+}
+
 .profile-pic-div {
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
     position: relative;
-    top: 500%;
     left: 15%;
     border-radius: 100%;
     overflow: hidden;
     border: 1px solid #A258B8;
+    display: flex;
 }
 
 #photo {

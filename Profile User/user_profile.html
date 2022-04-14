@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <title>User Profile</title>
     <link rel="stylesheet" href="user_profile.css">
-    <!--//<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">-->
+
 </head>
 <body>
 
-<div class="menuBar" >
-    <a href="home.html" target="_self"><img class="logo" src="logo.png"></a>
-    <a class="menuButton" href="home.html" target="_self">Home</a>
+<div class="menuBar">
+
+    <a><img class="logo" src="camera.png" target="_self"></a>
+    <a class="text--logo" href="home.html" target="_self">DailyViR</a>
+
+    <div role="search" class="search">
+        <input type="search" id="search" name="search" placeholder="Search...">
+        <img src="search.svg" class="search__icon">
+    </div>
+
+    <a><img src="menu.svg" class="menu__icon"></a>
+
+    <img src="image.png" class="profile-account">
+    <!--<a class="menuButton" href="home.html" target="_self">Home</a>
     <a class="menuButton" href="signIn.html" target="_self">My Account</a>
     <a class="menuButton" href="" target="_self">Assistant</a>
     <a class="menuButton" href="" target="_self">Ranking</a>
-    <a class="menuButton" href="contact.html" target="_self">Contact Us</a>
+    <a class="menuButton" href="contact.html" target="_self">Contact Us</a>-->
 </div>
 
 <main class="background">
@@ -30,6 +41,7 @@
 
             </div>
             <div class="column">
+                <label class="text--notifications">Notifications </label><br>
                 <form action="action_page.php" method="post">
 
                     <label for="uname">Username:</label><br>
@@ -301,10 +313,10 @@
                     </select><br>
 
                     <label for="tags">Favorite tags:</label><br>
-                    <textarea id="tags" name="subject" placeholder="Add some tags... one space "
+                    <textarea id="tags" name="subject" placeholder="Add some tags... one space between each tag "
                               style="height:50px"></textarea><br>
 
-                    <input type="submit" value="Save">
+                    <input type="submit" value="Save" style="float: right;">
 
                 </form>
             </div>
