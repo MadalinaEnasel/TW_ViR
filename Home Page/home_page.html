@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home_page.css">
 </head>
 <body>
+
+<div class="menuBar">
+    <div class="left">
+        <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+        <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+
+        <div role="search" class="search">
+            <label for="search"> </label><input type="search" id="search" name="search" placeholder="Search...">
+            <a href="../Home%20Page/home_page.html"><img src="search.svg" class="search__icon"
+                                                         alt="The src doesn't exist"></a>
+        </div>
+
+        <a><img src="menu.svg" class="menu__icon" alt="The src doesn't exist"></a>
+
+
+    </div>
+
+    <div class="right">
+
+        <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
+
+        <a href="notifications.html"><img src="notifications.svg" class="notifications__icon"
+                                          alt="The src doesn't exist"></a>
+
+        <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon"
+                                                           alt="The src doesn't exist"></a>
+
+        <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
+
+    </div>
+</div>
+
+<main class="background">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <video class="video" controls>
+                </video>
+                <div class="under_video">
+                    <div class="under_video_left">
+                        <a href="user_profile.html"><img src="image.png" class="user_picture"
+                                                         alt="The src doesn't exist"></a>
+                        <p class="username_text">U.N.</p>
+                    </div>
+
+                    <div class="under_video_right">
+                        <p class="text__title">Some Title and other stuff like that</p>
+                        <p class="hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <video width="213" height="133" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="column">
+                <video width="213" height="133" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="column">
+                <video width="213" height="133" controls>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+    </div>
+</main>
+</body>
 
 </body>
 </html>

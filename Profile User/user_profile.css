@@ -39,14 +39,6 @@ body {
     font-size: 30px;
 }
 
-.padding_bottom {
-    padding-bottom: 5%;
-}
-
-.padding_left {
-    padding-left: 5%;
-}
-
 .viewButton {
     padding-block-start: 12px;
     color: #f2f2f2;
