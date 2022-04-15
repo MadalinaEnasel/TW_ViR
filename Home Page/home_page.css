@@ -154,7 +154,7 @@ input[type=search] {
     float: left;
     position: relative;
     height: 25px;
-    width: 15px;
+    width: 25px;
     overflow: hidden;
     border-radius: 100%;
     border: 1px solid #A258B8;
@@ -170,6 +170,7 @@ input[type=search] {
     padding-right: 4px;
     text-align: initial;
     text-decoration: none;
+    margin:0;
 
 }
 
@@ -194,7 +195,6 @@ input[type=search] {
     display: grid;
     width: 85%;
     height: 100%;
-
 }
 
 .username_text{
@@ -203,15 +203,40 @@ input[type=search] {
     font-family: "Tajawal", sans-serif;
     font-size: 11px;
     padding-right: 4px;
-    text-align: initial;
     text-decoration: none;
+    margin:0;
+    text-align: center;
 }
 
+.loadButton{
+    align-content: center;
+    text-align: -moz-center;
+padding: 0 10px ;
+    text-decoration: none;
+    padding-block-start: 12px;
+    border-radius: 5px;
+    box-sizing: content-box;
+    border: none;
+    font-family: "Tajawal", sans-serif;
+    font-size: 18px;
+    color: #A258B8;
+    background-color: transparent;
+    color: #A258B8;
+    align-content: center;
+}
+
+.loadButton:hover{
+    box-shadow: rgba(179,52,231,0.3);
+}
+.load_text{
+
+}
 .hashtags{
     float:left;
     color: #3F729B;
     font-family: "Tajawal", sans-serif;
     font-size: 11px;
+    margin:0;
     padding-right: 4px;
 }
 .video{
