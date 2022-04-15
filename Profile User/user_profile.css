@@ -67,8 +67,6 @@ body {
     background-color: #954FA8;
     color: white;
     border-radius: 5px;
-    padding-right: 2%;
-    padding-left: 2%;
     text-decoration: none;
 }
 
@@ -106,12 +104,31 @@ body {
     float: right;
 }
 
+.text_changeAccount{
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+}
+
+.text_link_change{
+    color: rgba(97,36,133,0.94);
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: center;
+}
+
 .trendingButton:hover {
     background-color: #954FA8;
     color: white;
     border-radius: 5px;
-    padding-right: 2%;
-    padding-left: 2%;
     text-decoration: none;
 }
 
@@ -164,6 +181,14 @@ input[type=submit] {
     -moz-box-sizing: content-box;
 }
 
+input[type=submit]:hover{
+    background-color: #954FA8;
+    color: white;
+    border-radius: 4px;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
 .text--notifications {
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
@@ -178,11 +203,6 @@ label {
     font-weight: 700;
     font-size: 18px;
     color: #A258B8;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input.b[type=submit]:hover {
-    background-color: #784087;
 }
 
 /* Add a background color and some padding around the form */
