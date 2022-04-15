@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: Tajawal, sans-serif;
+}
+
+.background {
+    padding: 0.5%;
+    margin: 0 auto auto;
+    top: 0;
+    left: 5%;
+    width: 80%;
+    height: 100%;
+   
+}
+
+.text--logo {
+    float:left;
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+
+}
+
+.menuBar {
+    background-image: linear-gradient(#A258B8, white);
+    overflow: hidden;
+    height: 60px;
+    position: relative;
+    display: flex;
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.padding_bottom {
+    padding-bottom: 5%;
+}
+
+.padding_left {
+    padding-left: 5%;
+}
+
+.viewButton {
+    padding-block-start: 12px;
+    color: #f2f2f2;
+    background-color: #A258B8;
+    border-radius: 5px;
+    box-sizing: content-box;
+    align-content: center;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 0 12px;
+    border: none;
+    text-decoration: none;
+
+}
+
+.viewButton:hover {
+    background-color: #954FA8;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.trendingButton {
+    float: right;
+    align-content: center;
+    text-align: center;
+    text-anchor: middle;
+    height: 50%;
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    padding-block-start: 12px;
+    color: #f2f2f2;
+    background-color: #A258B8;
+    border-radius: 5px;
+    box-sizing: content-box;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 0 12px;
+    border: none;
+}
+
+.left {
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+.right {
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+
+
+
+.trendingButton:hover {
+    background-color: #954FA8;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 16px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #A258B8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+input[type=submit]:hover{
+    background-color: #954FA8;
+    color: white;
+    border-radius: 4px;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.text--notifications {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+    padding-bottom: 40px;
+    padding-right: 30px;
+}
+
+label {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 20%;
+    padding: 1%;
+}
+
+/* Create two columns that float next to each other */
+
+.column {
+    float: left;
+    width: 50%;
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    height: 22px;
+    width: 30px;
+    padding: 15px 2px 0 30px;
+}
+
+::placeholder {
+    font-family: "Tajawal", sans-serif;
+    color: grey;
+    font-size: 12px;
+}
+
+/* styling search bar */
+input[type=search] {
+    font-family: "Tajawal", sans-serif;
+    color: rgba(0, 0, 0, 0.94);
+    font-size: 12px;
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */
+    border: 1px solid #A258B8; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: content-box; /* How long are the boxes*/
+    margin-top: 10px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.search {
+    height: 90%;
+    float: left;
+    width: 45%;
+    padding-left: 5px;
+    padding-top: 0;
+    display: flex;
+}
+
+.search__icon {
+    height: 20px;
+    width: 20px;
+    padding: 14px 2px 0 0;
+    margin-left: -25px;
+    border-radius: 5px;
+}
+
+.menu__icon {
+    height: 27px;
+    width: 23px;
+    padding: 10px 2px 4px 5px;
+    border-radius: 5px;
+}
+
+.notifications__icon {
+    height: 40%;
+    float: right;
+    padding: 12px 2px 0 5px;
+    border-radius: 5px;
+}
+
+.upload__icon {
+    float: right;
+    height: 35%;
+    padding: 12px 2px 0 5px;
+    border-radius: 5px;
+}
+
+.profile-account {
+    float: right;
+    position: relative;
+    height: 25px;
+    margin-right: 12%;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+    margin-top: 10px;
+}
+
+.profile-pic-div {
+    height: 40%;
+    width: 40%;
+    position: relative;
+    left: 15%;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid #A258B8;
+    display: flex;
+}
+
+.container_clipuri{
+    margin-top: 5%;
+    height: 100%;
+    width: 80%;
+    background-color: #954FA8;
+}
+
+.column_clipuri::content{
+    float: left;
+    width: 50%;
+    padding-top: 5%;
+    background-color: white;
+}
+
+
+.row_clipuri::content{
+
+    height: 30%;
+    width: 50%;
+    padding-top: 5%;
+    background-color: aqua;
+}
+
+.row_clipuri_info::content{
+    height: 50%;
+    padding-top: 5%;
+    width: 100%;
+    margin: auto auto auto auto;
+    font-family: "Tajawal", sans-serif;
+    font-size: 0%;
+    color: #954FA8;
+    background-color: aquamarine;
+
+}
