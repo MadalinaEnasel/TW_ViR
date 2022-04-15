@@ -8,26 +8,33 @@
 <body>
 
 <div class="menuBar">
+    <div class="left">
+        <a><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+        <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
 
-    <a><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
-    <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+        <div role="search" class="search">
+            <label for="search"></label><input type="search" id="search" name="search" placeholder="Search...">
+            <img src="search.svg" class="search__icon" alt="The src doesn't exist">
+        </div>
 
-    <div role="search" class="search">
-        <label for="search"></label><input type="search" id="search" name="search" placeholder="Search...">
-        <img src="search.svg" class="search__icon" alt="The src doesn't exist">
+        <a><img src="menu.svg" class="menu__icon" alt="The src doesn't exist"></a>
+
+
     </div>
 
-    <a><img src="menu.svg" class="menu__icon" alt="The src doesn't exist"></a>
+    <div class="right">
 
-    <a class="menuButton" href="../Trending/trending.html" target="_self">Trending</a>
+        <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
 
-    <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon" alt="The src doesn't exist"></a>
+        <a href="notifications.html"><img src="notifications.svg" class="notifications__icon"
+                                          alt="The src doesn't exist"></a>
 
-    <a href="notifications.html"><img src="notifications.svg" class="notifications__icon" alt="The src doesn't exist"></a>
+        <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon"
+                                                           alt="The src doesn't exist"></a>
 
-    <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
+        <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
 
-
+    </div>
 </div>
 
 <main class="background">
@@ -45,7 +52,7 @@
             <div class="column">
                 <label class="text--notifications">Notifications </label>
                 <a class="viewButton" href="notifications.html" target="_self"> View
-            
+
                 </a>
                 <div class="padding_bottom"></div>
 
