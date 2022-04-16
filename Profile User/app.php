@@ -1,4 +1,5 @@
-//declearing html elements
+
+//declaring html elements
 
 const imgDiv = document.querySelector('.profile-pic-div');
 const img = document.querySelector('#photo');
@@ -19,13 +20,13 @@ uploadBtn.style.display = "none";
 
 //lets work for image showing functionality when we choose an image to upload
 
-//when we choose a foto to upload
+//when we choose a photo to upload
 
 file.addEventListener('change', function(){
 //this refers to file
-const choosedFile = this.files[0];
+const chosenFile = this.files[0];
 
-if (choosedFile) {
+if (chosenFile) {
 
 const reader = new FileReader(); //FileReader is a predefined function of JS
 
@@ -33,15 +34,7 @@ reader.addEventListener('load', function(){
 img.setAttribute('src', reader.result);
 });
 
-reader.readAsDataURL(choosedFile);
+reader.readAsDataURL(chosenFile);
 
-//Allright is done
-
-//please like the video
-//comment if have any issue related to vide & also rate my work in comment section
-
-//And aslo please subscribe for more tutorial like this
-
-//thanks for watching
 }
 });

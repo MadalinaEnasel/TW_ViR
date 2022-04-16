@@ -10,7 +10,7 @@
 <div class="menuBar">
     <div class="menuBar__left">
         <a href="../Home%20Page/home_page.html"><img class="menuBar--logo" src="camera.png" alt="The src doesn't exist"></a>
-        <a class="menuBar--textLogo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+        <a class="menuBar__textLogo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
 
         <div role="search" class="menuBar__search">
             <label for="search"> </label><input type="search" id="search" name="search" placeholder="Search...">
@@ -18,8 +18,34 @@
                                                          alt="The src doesn't exist"></a>
         </div>
 
+        <span class="accordion">
         <a><img src="menu.svg" class="menuBar__catIcon" alt="The src doesn't exist"></a>
+        </span>
 
+        <div class="menuBar__cat">
+            <a class="menuBar__catBtn">For you</a>
+            <a class="menuBar__catBtn">Music</a>
+            <a class="menuBar__catBtn">Streaming</a>
+            <a class="menuBar__catBtn">Politics</a>
+            <a class="menuBar__catBtn">Spirituality</a>
+            <a class="menuBar__catBtn">Beauty</a>
+            <a class="menuBar__catBtn">DIYs</a>
+            <a class="menuBar__catBtn">Cooking</a>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+
+            acc[0].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "grid") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "grid";
+                }
+            });
+
+        </script>
     </div>
 
     <div class="menuBar__right">

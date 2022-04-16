@@ -107,7 +107,6 @@ input[type=search] {
 /* proprieties for the header */
 .menuBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
-    overflow: hidden; /* when header overflows background, do not show it*/
     height: 60px; /* set height */
     position: relative; /* */
     display: flex; /* flex mode => elements go one after another on one single line */
@@ -130,7 +129,7 @@ input[type=search] {
 }
 
 /* proprieties for the text from the logo */
-.menuBar--textLogo {
+.menuBar__textLogo {
     float: left; /* arrange starting from left, after the last element from left */
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
@@ -162,6 +161,51 @@ input[type=search] {
     height: 27px;
     width: 23px;
     padding: 13px 2px 4px 5px;
+}
+
+.menuBar__catIcon:hover {
+    background-image: linear-gradient(#A258B8,white);
+}
+
+.accordion {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menuBar__cat {
+    grid-template-columns:auto auto auto auto;
+    float: right;
+    margin-right: -40px;
+    display: none;
+    row-gap: 10px;
+    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 200%;
+    padding: 12px;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+
+.menuBar__catBtn:hover{
+    background-color: #f2f2f2;
+}
+
+.menuBar__catBtn{
+    row-gap: 10px;
+    column-gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(171,48,236,0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing:border-box;
 }
 
 /* column that floats to the right in the menuBar*/
@@ -334,4 +378,7 @@ input[type=search] {
     cursor: pointer;
     display: none; /* display only when hovered */
 }
+
+
+
 
