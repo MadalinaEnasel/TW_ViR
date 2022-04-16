@@ -25,7 +25,7 @@ input[type=search] {
 /* CLASSES */
 
 /* proprieties for the header */
-.menuBar {
+.navBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
     overflow: hidden; /* when header overflows background, do not show it*/
     height: 60px; /* set height */
@@ -34,15 +34,15 @@ input[type=search] {
     flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
 }
 
-/* column that floats to the left in the menuBar*/
-.menuBar__left {
-    width: 70%; /* takes 70% of the menuBar's width */
+/* column that floats to the left in the navBar*/
+.navBar__left {
+    width: 70%; /* takes 70% of the navBar's width */
     height: 100%;
     float: left;
 }
 
 /* proprieties for the logo icon */
-.menuBar--logo {
+.navBar--logo {
     float: left; /* arrange starting from left, after the last element from left */
     height: 22px; /* fixed height */
     width: 30px; /* fixed width*/
@@ -50,7 +50,7 @@ input[type=search] {
 }
 
 /* proprieties for the text from the logo */
-.menuBar--textLogo {
+.navBar--textLogo {
     float: left; /* arrange starting from left, after the last element from left */
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
@@ -61,7 +61,7 @@ input[type=search] {
 }
 
 /* proprieties of the search bar */
-.menuBar__search {
+.navBar__search {
     height: 90%; /* take 90% of the left's height */
     float: left; /* arrange starting from left, after the last element from left */
     width: 60%; /* take 60% of the left's width */
@@ -70,7 +70,7 @@ input[type=search] {
 }
 
 /* proprieties of the search icon */
-.menuBar__searchIcon {
+.navBar__searchIcon {
     height: 20px; /* set height */
     width: 20px; /* set width */
     padding: 17px 2px 0 0; /* padding */
@@ -78,21 +78,21 @@ input[type=search] {
 }
 
 /* proprieties of the menu icon */
-.menuBar__catIcon {
+.navBar__catIcon {
     height: 27px;
     width: 23px;
     padding: 13px 2px 4px 5px;
 }
 
-/* column that floats to the right in the menuBar*/
-.menuBar__right {
-    width: 30%; /* takes 30% of the menuBar's width */
+/* column that floats to the right in the navBar*/
+.navBar__right {
+    width: 30%; /* takes 30% of the navBar's width */
     height: 100%;
     float: right;
 }
 
 /* proprieties of the account icon */
-.menuBar__pictureAccount {
+.navBar__pictureAccount {
     float: right; /* arrange starting from right, after the last element from left */
     position: relative;
     height: 25px; /* fixed height */
@@ -104,21 +104,21 @@ input[type=search] {
 }
 
 /* proprieties of the notification icon */
-.menuBar__notificationsIcon {
+.navBar__notificationsIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 40%;
     padding: 14px;
 }
 
 /* proprieties of the upload icon */
-.menuBar__uploadIcon {
+.navBar__uploadIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 35%;
     padding: 14px 0 12px 14px;
 }
 
 /* proprieties of the trending button */
-.menuBar__trendingBtn {
+.navBar__trendingBtn {
     float: right;
     vertical-align: middle; /* vertical alignment */
     text-align: center; /* horizontal alignment */
@@ -137,7 +137,7 @@ input[type=search] {
 }
 
 /* proprieties for when submit button is hovered */
-.menuBar__trendingBtn:hover {
+.navBar__trendingBtn:hover {
     background-color: #954FA8; /* color of the button */
 }
 
@@ -161,34 +161,37 @@ input[type=search] {
     clear: both;
 }
 
+/* proprieties for videos */
 .background__video {
-    width: 90%;
+    width: 90%; /* of the column */
     height: 133px;
 }
 
+/* equivalent to row to background */
 .background__underVideo {
-    /*padding: 1%;*/
     overflow: hidden;
-    width: 90%;
+    width: 90%;/* of the video */
     position: relative;
     display: flex;
-    color: white;
 }
 
+/* equivalent with left to navBar */
 .background__underVideoLeft {
-    width: 15%;
+    width: 15%;/* of the underVideo */
     display: grid;
-    height: 100%;
+    height: 100%;/* of the underVideo */
     float: left;
 }
 
+/* equivalent with right to navBar*/
 .background__underVideoRight {
     float: right;
     display: grid;
-    width: 85%;
-    height: 100%;
+    width: 85%; /* of the underVideo */
+    height: 100%;/* of the underVideo */
 }
 
+/* proprieties of userPicture, under the video */
 .background--userPicture {
     float: left;
     position: relative;
@@ -199,6 +202,7 @@ input[type=search] {
     border: 1px solid #A258B8;
 }
 
+/* proprieties of username text, under the video */
 .background__usernameText {
     float: left;
     color: #999999;
@@ -210,6 +214,7 @@ input[type=search] {
     text-align: center;
 }
 
+/* proprieties of title, under the video */
 .background__title {
     float: left;
     color: black;
@@ -223,6 +228,7 @@ input[type=search] {
     margin: 0;
 }
 
+/* proprieties of hashtags, under the video */
 .background__hashtags {
     float: left;
     color: #3F729B;
@@ -232,13 +238,16 @@ input[type=search] {
     padding-right: 4px;
 }
 
+/* proprieties of "Load More.." */
 .background__loadBtn {
-    align-content: center;
-    text-align: -moz-center;
+    display: flex;
+    justify-content: center;
     padding: 0 10px;
     text-decoration: none;
     padding-block-start: 12px;
+    margin-bottom: 50px;
     border-radius: 5px;
+    /*margin:auto;*/
     box-sizing: content-box;
     border: none;
     font-family: "Tajawal", sans-serif;
@@ -247,8 +256,9 @@ input[type=search] {
     background-color: transparent;
 }
 
+/* when hovered adds shadow */
 .background__loadBtn:hover {
-    box-shadow: rgba(179, 52, 231, 0.3);
+    box-shadow: 5px 5px 5px rgba(57,18,78,0.31);
 }
 
 
