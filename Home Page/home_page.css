@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
 body {
     margin: 0;
     font-family: Tajawal, sans-serif;
@@ -14,7 +15,7 @@ body {
 }
 
 .text--logo {
-    float:left;
+    float: left;
     color: white;
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
@@ -160,8 +161,8 @@ input[type=search] {
     border: 1px solid #A258B8;
 }
 
-.text__title{
-    float:left;
+.text__title {
+    float: left;
     color: black;
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
@@ -170,11 +171,11 @@ input[type=search] {
     padding-right: 4px;
     text-align: initial;
     text-decoration: none;
-    margin:0;
+    margin: 0;
 
 }
 
-.under_video{
+.under_video {
     /*padding: 1%;*/
     overflow: hidden;
     width: 90%;
@@ -183,35 +184,35 @@ input[type=search] {
     color: white;
 }
 
-.under_video_left{
+.under_video_left {
     width: 15%;
     display: grid;
     height: 100%;
     float: left;
 }
 
-.under_video_right{
+.under_video_right {
     float: right;
     display: grid;
     width: 85%;
     height: 100%;
 }
 
-.username_text{
-    float:left;
+.username_text {
+    float: left;
     color: #999999;
     font-family: "Tajawal", sans-serif;
     font-size: 11px;
     padding-right: 4px;
     text-decoration: none;
-    margin:0;
+    margin: 0;
     text-align: center;
 }
 
-.loadButton{
+.loadButton {
     align-content: center;
     text-align: -moz-center;
-padding: 0 10px ;
+    padding: 0 10px;
     text-decoration: none;
     padding-block-start: 12px;
     border-radius: 5px;
@@ -225,21 +226,24 @@ padding: 0 10px ;
     align-content: center;
 }
 
-.loadButton:hover{
-    box-shadow: rgba(179,52,231,0.3);
+.loadButton:hover {
+    box-shadow: rgba(179, 52, 231, 0.3);
 }
-.load_text{
+
+.load_text {
 
 }
-.hashtags{
-    float:left;
+
+.hashtags {
+    float: left;
     color: #3F729B;
     font-family: "Tajawal", sans-serif;
     font-size: 11px;
-    margin:0;
+    margin: 0;
     padding-right: 4px;
 }
-.video{
+
+.video {
     width: 90%;
     height: 133px;
 }
