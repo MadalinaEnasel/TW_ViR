@@ -1,132 +1,33 @@
+/*Imports the main font from Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
+/* GENERAL PROPRIETIES */
+
 body {
+    /* Sets margin to 0 => body extends in every corner */
     margin: 0;
+    /* Sets all text to font Tajawal */
     font-family: Tajawal, sans-serif;
 }
 
-.background {
-    padding: 0.5%;
-    margin: 0 auto auto;
-    top: 0;
-    left: 5%;
-    width: 80%;
-    height: 100%;
-}
-
-.text--logo {
-    float:left;
-    color: white;
+label {
+    /* proprieties for text format for labels */
     font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-    padding-top: 4px;
-    padding-right: 4px;
-    text-align: initial;
-    text-decoration: none;
-
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8; /* color of the text */
 }
 
-.menuBar {
-    background-image: linear-gradient(#A258B8, white);
-    overflow: hidden;
-    height: 60px;
-    position: relative;
-    display: flex;
-    color: white;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-}
+/* INPUT PROPRIETIES */
 
-.viewButton {
-    padding-block-start: 12px;
-    color: #f2f2f2;
-    background-color: #A258B8;
-    border-radius: 5px;
-    box-sizing: content-box;
-    align-content: center;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    padding: 0 12px;
-    border: none;
-    text-decoration: none;
-
-}
-
-.viewButton:hover {
-    background-color: #954FA8;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.trendingButton {
-    float: right;
-    align-content: center;
-    text-align: center;
-    text-anchor: middle;
-    height: 50%;
-    display: flex;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    text-decoration: none;
-    padding-block-start: 12px;
-    color: #f2f2f2;
-    background-color: #A258B8;
-    border-radius: 5px;
-    box-sizing: content-box;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 15px;
-    padding: 0 12px;
-    border: none;
-}
-
-.left {
-    width: 70%;
-    height: 100%;
-    float: left;
-}
-
-.right {
-    width: 30%;
-    height: 100%;
-    float: right;
-}
-
-.text_changeAccount{
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-    padding-top: 4px;
-    padding-right: 4px;
-    text-align: initial;
-    text-decoration: none;
-}
-
-.text_link_change{
-    color: rgba(97,36,133,0.94);
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    padding-top: 4px;
-    padding-right: 4px;
-    text-align: center;
-}
-
-.trendingButton:hover {
-    background-color: #954FA8;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
+/* proprieties for input text, select and textarea type */
 input[type=text], select, textarea {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 5px; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
@@ -135,53 +36,270 @@ input[type=text], select, textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+/* proprieties for input email type */
 input[type=email] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 5px; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
     margin-top: 16px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+/* proprieties for input password */
 input[type=password] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 5px; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
     margin-top: 16px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Style the submit button with a specific background color etc */
+/* proprieties for submit button */
 input[type=submit] {
-    background-color: #A258B8;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    float:right;
+    background-color: #A258B8; /* color of the button */
+    color: white; /* color of the text */
+    padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
+    border: none; /* for a sleek look, to avoid borders of html buttons */
+    border-radius: 4px; /* to round the button, used px and not % to round the corners and not the edges */
+    cursor: pointer; /* indicates a link, cursor become a pointing hand */
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 700; /* weight */
+    font-size: 18px; /* size */
+}
+
+/* proprieties for when submit button is hovered */
+input[type=submit]:hover {
+    background-color: #954FA8; /* color of the button */
+}
+
+/* proprieties input of search bar*/
+input[type=search] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-size: 12px; /* size */
+    width: 100%; /* Full width */
+    outline-color: #A258B8; /* when clicked and while in the search bar, there will be a #A258B8 border */
+    padding: 10px; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
+    border: 1px solid #A258B8; /* #A258B8 border */
+    border-radius: 5px; /* Rounded border, used px and not % to round the corners and not the edges */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 13px; /* Add a top margin */
+    margin-bottom: 13px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* CLASSES */
+
+/* proprieties for the header */
+.menuBar {
+    background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
+    height: 60px; /* set height */
+    position: relative; /* */
+    display: flex; /* flex mode => elements go one after another on one single line */
+    flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
+}
+
+/* column that floats to the left in the menuBar*/
+.menuBar__left {
+    width: 70%; /* takes 70% of the menuBar's width */
+    height: 100%;
+    float: left;
+}
+
+/* proprieties for the logo icon */
+.menuBar--logo {
+    float: left; /* arrange starting from left, after the last element from left */
+    height: 22px; /* fixed height */
+    width: 30px; /* fixed width*/
+    padding: 15px 0 0 30px; /* some padding*/
+}
+
+/* proprieties for the text from the logo */
+.menuBar__textLogo {
+    float: left; /* arrange starting from left, after the last element from left */
+    color: white; /* color of the text */
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 800;
+    font-size: 30px;
+    padding: 4px 0 0 4px;
+    text-decoration: none; /* text is originally a link. Used to not underline */
+}
+
+/* proprieties of the search bar */
+.menuBar__search {
+    height: 90%; /* take 90% of the left's height */
+    float: left; /* arrange starting from left, after the last element from left */
+    width: 60%; /* take 60% of the left's width */
+    padding-left: 5px;
+    display: flex; /* flex mode => elements go one after another on one single line */
+}
+
+/* proprieties of the search icon */
+.menuBar__searchIcon {
+    height: 20px; /* set height */
+    width: 20px; /* set width */
+    padding: 17px 2px 0 0; /* padding */
+    margin-left: -25px; /* to overflow over the search bar*/
+}
+
+/* proprieties of the menu icon */
+.menuBar__catIcon {
+    height: 27px;
+    width: 23px;
+    padding: 13px 2px 4px 5px;
+}
+
+.menuBar__catIcon:hover {
+    background-image: linear-gradient(#A258B8,white);
+}
+
+.accordion {
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.menuBar__cat {
+    grid-template-columns:auto auto auto auto;
+    float: right;
+    margin-right: -40px;
+    display: none;
+    row-gap: 10px;
+    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 200%;
+    padding: 12px;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+
+.menuBar__catBtn:hover{
+    background-color: #f2f2f2;
+}
+
+.menuBar__catBtn{
+    row-gap: 10px;
+    column-gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(171,48,236,0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing:border-box;
+}
+
+/* column that floats to the right in the menuBar*/
+.menuBar__right {
+    width: 30%; /* takes 30% of the menuBar's width */
+    height: 100%;
+    float: right;
+}
+
+/* proprieties of the account icon */
+.menuBar__pictureAccount {
+    float: right; /* arrange starting from right, after the last element from left */
+    position: relative;
+    height: 25px; /* fixed height */
+    width: 25px; /*fixed width */
+    margin-right: 12%;
+    border-radius: 100%; /* gives circle shape */
+    border: 1px solid #A258B8;
+    margin-top: 10px;
+}
+
+/* proprieties of the notification icon */
+.menuBar__notificationsIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 40%;
+    padding: 14px;
+}
+
+/* proprieties of the upload icon */
+.menuBar__uploadIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 35%;
+    padding: 14px 0 12px 14px;
+}
+
+/* proprieties of the trending button */
+.menuBar__trendingBtn {
+    float: right;
+    vertical-align: middle; /* vertical alignment */
+    text-align: center; /* horizontal alignment */
+    height: 45%; /* takes 45% of the left's height */
     font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    box-sizing: content-box;
-    -moz-box-sizing: content-box;
+    font-weight: 800;
+    font-size: 15px;
+    color: #f2f2f2; /* color of the text */
+    text-decoration: none; /* text is originally a link. Used to not underline */
+    margin-top: 12px;
+    margin-bottom: 20px;
+    background-color: #A258B8;
+    padding: 2px 2% 0 2%;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-input[type=submit]:hover{
-    background-color: #954FA8;
-    color: white;
-    border-radius: 4px;
-    padding: 12px 20px;
-    text-decoration: none;
+/* proprieties for when submit button is hovered */
+.menuBar__trendingBtn:hover {
+    background-color: #954FA8; /* color of the button */
 }
 
-.text--notifications {
+/* for a neat arrangement in the center of the screen, oes not take all the body */
+.background {
+    overflow: hidden;
+    margin: auto; /* some margins, auto so it splits equally */
+    width: 80%; /* takes up only 80% of the body's width */
+}
+
+/* column, there are two in the background div */
+.background__column {
+    float: left;
+    width: 50%; /* of the background block */
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.background__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* proprieties for picture upload*/
+.background__profilePic {
+    height: 40%; /* of background div */
+    width: 40%; /* of background div */
+    position: relative;
+    left: 15%; /* lets 15% of background div empty and then puts the photo */
+    border-radius: 100%; /* makes it a circle */
+    overflow: hidden;
+    border: 1px solid #A258B8;
+    display: flex;
+}
+
+/* proprieties of notification text */
+.background__textNotifications {
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -190,145 +308,77 @@ input[type=submit]:hover{
     padding-right: 30px;
 }
 
-label {
+/* proprieties of view (notifications) */
+.background__viewBtn {
+    color: #f2f2f2; /* text color */
+    background-color: #A258B8;
+    border-radius: 5px;
+    box-sizing: content-box;
+    align-content: center;
     font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+/* when hovered changes color */
+.background__viewBtn:hover {
+    background-color: #954FA8;
+}
+
+/* proprieties of "Want to change accounts?" */
+.background__textChgAccount {
     color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 20%;
-    padding: 1%;
+/* proprieties of "Connect to another account" */
+.background__textLnkChg {
+    color: rgba(97, 36, 133, 0.94);
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: center;
 }
 
-/* Create two columns that float next to each other */
-
-.column {
-    float: left;
-    width: 50%;
-    padding-top: 5%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.logo {
-    float: left;
-    height: 22px;
-    width: 30px;
-    padding: 15px 2px 0 30px;
-}
-
+/* style the placeholder */
 ::placeholder {
     font-family: "Tajawal", sans-serif;
     color: grey;
     font-size: 12px;
 }
 
-/* styling search bar */
-input[type=search] {
-    font-family: "Tajawal", sans-serif;
-    color: rgba(0, 0, 0, 0.94);
-    font-size: 12px;
-    width: 100%; /* Full width */
-    padding: 10px; /* Some padding */
-    border: 1px solid #A258B8; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: content-box; /* How long are the boxes*/
-    margin-top: 10px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-.search {
-    height: 90%;
-    float: left;
-    width: 45%;
-    padding-left: 5px;
-    padding-top: 0;
-    display: flex;
-}
-
-.search__icon {
-    height: 20px;
-    width: 20px;
-    padding: 14px 2px 0 0;
-    margin-left: -25px;
-    border-radius: 5px;
-}
-
-.menu__icon {
-    height: 27px;
-    width: 23px;
-    padding: 10px 2px 4px 5px;
-    border-radius: 5px;
-}
-
-.notifications__icon {
-    height: 40%;
-    float: right;
-    padding: 12px 2px 0 5px;
-    border-radius: 5px;
-}
-
-.upload__icon {
-    float: right;
-    height: 35%;
-    padding: 12px 2px 0 5px;
-    border-radius: 5px;
-}
-
-.profile-account {
-    float: right;
-    position: relative;
-    height: 25px;
-    margin-right: 12%;
-    width: 25px;
-    overflow: hidden;
-    border-radius: 100%;
-    border: 1px solid #A258B8;
-    margin-top: 10px;
-}
-
-.profile-pic-div {
-    height: 40%;
-    width: 40%;
-    position: relative;
-    left: 15%;
-    border-radius: 100%;
-    overflow: hidden;
-    border: 1px solid #A258B8;
-    display: flex;
-}
-
+/* style element with id=photo */
 #photo {
     height: 100%;
     width: 100%;
 }
 
-#file {
-    display: none;
-}
-
+/* style element with id=uploadBtn */
 #uploadBtn {
     height: 40px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* put button on the image */
     text-align: center;
     background: rgba(162, 88, 184, 0.5);
     color: white;
     line-height: 30px;
-    font-family: sans-serif;
+    font-family: Tajawal, sans-serif;
     font-size: 15px;
     cursor: pointer;
-    display: none;
+    display: none; /* display only when hovered */
 }
+
+
+
+

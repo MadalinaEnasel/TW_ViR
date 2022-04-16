@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="Login.css">
+    <title>Upload</title>
+    <link rel="stylesheet" href="upload_video.css">
   </head>
   <body>
     <div class="menuBar">
@@ -28,33 +28,32 @@
           <a href="notifications.html"><img src="notifications.png" class="notifications__icon"
                                             alt="The src doesn't exist"></a>
   
-          <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon"
-                                                             alt="The src doesn't exist"></a>
-  
           <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
   
       </div>
-  </div>
-    <div class="center">
-      <h1>Login</h1>
-      <form method="post">
-        <div class="txt_field">
-          <input type="text" required>
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required>
-          <span></span>
-          <label>Password</label>
-        </div>
-        <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login">
-        <div class="signup_link">
-          Not a member? <a href="../signup/Sign_up.html">Signup</a>
-        </div>
-      </form>
     </div>
-
+    <div class="container">
+        <div class="column">
+          <video class="video" controls>
+          </video>
+        </div>
+        <div class="column">
+          <input type="file" id="video" name="videofile" accept="video/*">
+        </div>
+        <div class="column">
+          <form method="post" target="video_manager.html">
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Video name</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Tags(Use spaces inbetween tags)</label>
+            </div>
+            <input type="submit" value="Upload">
+          </form>
+      </div>
   </body>
 </html>

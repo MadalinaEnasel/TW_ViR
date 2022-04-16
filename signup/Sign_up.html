@@ -6,9 +6,38 @@
     <link rel="stylesheet" href="Sign_up.css">
   </head>
   <body>
+    <div class="menuBar">
+      <div class="left">
+          <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+          <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+  
+          <div role="search" class="search">
+              <label for="search"> </label><input type="search"  id="search" name="search" placeholder="Search...">
+              <a href="../Home%20Page/home_page.html"><img src="search.png" class="search__icon" alt="The src doesn't exist"></a>
+          </div>
+  
+          <a><img src="menu.png" class="menu__icon" alt="The src doesn't exist"></a>
+  
+  
+      </div>
+  
+      <div class="right">
+  
+          <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
+  
+          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"
+                                            alt="The src doesn't exist"></a>
+  
+          <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon"
+                                                             alt="The src doesn't exist"></a>
+  
+          <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
+  
+      </div>
+  </div>
     <div class="center">
       <h1>Sign up</h1>
-      <form method="post">
+      <form>
         <div class="txt_field">
           <input type="text" required>
           <span></span>
@@ -44,7 +73,9 @@
             <span></span>
             <label>Gender</label>
           </div>
-        <input type="submit" value="Signup">
+        <a href="../login/Login.html">
+          <input type="submit"/>
+        </a>
       </form>
     </div>
 
