@@ -170,16 +170,16 @@ input[type=search] {
 /* equivalent to row to background */
 .background__underVideo {
     overflow: hidden;
-    width: 90%;/* of the video */
+    width: 90%; /* of the video */
     position: relative;
     display: flex;
 }
 
 /* equivalent with left to navBar */
 .background__underVideoLeft {
-    width: 15%;/* of the underVideo */
+    width: 15%; /* of the underVideo */
     display: grid;
-    height: 100%;/* of the underVideo */
+    height: 100%; /* of the underVideo */
     float: left;
 }
 
@@ -188,7 +188,7 @@ input[type=search] {
     float: right;
     display: grid;
     width: 85%; /* of the underVideo */
-    height: 100%;/* of the underVideo */
+    height: 100%; /* of the underVideo */
 }
 
 /* proprieties of userPicture, under the video */
@@ -258,7 +258,7 @@ input[type=search] {
 
 /* when hovered adds shadow */
 .background__loadBtn:hover {
-    box-shadow: 5px 5px 5px rgba(57,18,78,0.31);
+    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
 }
 
 
