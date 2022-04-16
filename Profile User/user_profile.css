@@ -172,6 +172,7 @@ input[type=search] {
     transition: 0.5s;
 }
 
+
 .menuBar__cat {
     grid-template-columns:auto auto auto auto;
     float: right;
