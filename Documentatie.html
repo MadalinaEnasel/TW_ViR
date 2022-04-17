@@ -56,16 +56,40 @@
                 <li><a href=#6.3>Appendix C: To Be Determined List</a></li>
               </ul>
         </section>
-        <section id="introduction">
-            <h1>
+        <section >
+            <h1 id="1">
                 1 Introduction
             </h1>
-            <h2>
+            <h2 id="1.1">
                 1.1 Purpose
             </h2>
             <p>
-
+                Aplicatia web descrisa in acest document este DailyViR. Aceasta documentatie v-a acoperi componenta de interfata a aplicatiei precum si componenta functionala a acesteia.
             </p>
+            <h2 id="1.2">
+                1.2 Document Conventions
+            </h2>
+            <p>
+                Documentul v-a respecta standardele setate de Scholarly HTML.
+            </p>
+            <h2 id="1.3">
+                1.3 Intended Audience and Reading Suggestions
+            </h2>
+            <p>
+                Documentul este destinat persoanelor ce doresc o prezentare in general a aplicatiei precum si detalii legate de implementare.
+            </p>
+            <h2 id="1.4">
+                1.4 Product Scope
+            </h2>
+            <p>
+                Scopul produsului este de a reda clipuri video pe o platforma online unde utilizatorii pot edita si urca videouri precum si a lasa comentarii si a observa statistici legate de clipurile dorite. Accesarea acestora se va face prin intermediul unui catalog de videouri, unele videouri avand sansa chiar de a aparea de pagina de videouri trending. Utilizatorul va primi deasemenea si notificari legate de informatii interesante acestuia (Vizualizari video postat, clip popular recent).
+            </p>
+            <h2 id="1.5">
+                1.5 References
+            </h2>
+            <p>
+                
+            </p>            
         </section>
         <section id="overall">
             <h1>
@@ -78,16 +102,34 @@
                 Identify the product whose software requirements are specified in this document, including the revision or release number. Describe the scope of the product that is covered by this SRS, particularly if this SRS describes only part of the system or a single subsystem.
             </p>
         </section>
-        <section id="external">
-            <h1>
+        <section >
+            <h1 id="3">
                 External Interface Requirements
             </h1>
-            <h2>
-                1.1 Purpose
+            <h2 id="3.1">
+                3.1 User Interfaces
             </h2>
             <p>
-                Identify the product whose software requirements are specified in this document, including the revision or release number. Describe the scope of the product that is covered by this SRS, particularly if this SRS describes only part of the system or a single subsystem.
+                Paginile componente ale interfetei vor fi: Pagina de Landing, Login, Signup, Home, Trending, Notifications, View Video, Upload Video, Manage Video, Statistics si User Profile. Majoritatea paginilor vor contine un header ce contine butoanele necesare navigarii site-ului: User Page Button, Search Bar, Home Page button, etc. Paginile vor respecta stiluri CSS comune (font, culori specifice, dimensiuni butoane) precum si conventii comune de realizare a paginilor html (grid design).
+             </p>
+            <h2 id="3.2">
+                3.2 Hardware Interfaces
+            </h2>
+            <p>
+                Se intentioneaza ca pagina web sa poata fi utilizata de un browser pe calculator, laptop dar si device-uri portabile precum tablete si smartphone-uri.
             </p>
+            <h2 id="3.3">
+                3.3 Software Interfaces
+            </h2>
+            <p>
+                Site-ul va utiliza o baza de date MySQL pentru a stoca informatiile necesare functionarii site-ului (Informatii useri, informatii video-uri). Fiecare clip video va utiliza player-ul video utilizat de site-ul Vimeo.
+            </p>
+            <h2 id="3.4">
+                3.4 Communications Interfaces
+            </h2>
+            <p>
+                Pentru creerea unui cont v-a fi necesar o adresa de email cu care se poate realiza, eventual, o comunicare daca este dorit (advertisement emails). Unele pagini vor face diferite tipuri de request-uri altor pagini din cadrul site-ului (Pagina de Login va accesa home page-ul cu anumiti parametrii).
+            </p>           
         </section>
         <section>
             <h1>
