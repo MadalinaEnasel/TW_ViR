@@ -20,19 +20,18 @@ label {
 
 /* INPUT PROPRIETIES */
 
-/* proprieties for input text, select and textarea type */
 input[type=text], select, textarea {
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 500; /* weight */
-    font-size: 14px; /* size */
+    font-size: 2.3vh; /* size */
     color: #999999; /* color */
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
+    padding: 2vh; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #ccc; /* Gray border */
+    border-radius: 0.8vh; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 2.7vh; /* Add a top margin */
+    margin-bottom: 2.7vh; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -40,15 +39,15 @@ input[type=text], select, textarea {
 input[type=email] {
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 500; /* weight */
-    font-size: 14px; /* size */
+    font-size: 2.3vh; /* size */
     color: #999999; /* color */
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
+    padding: 2vh; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #ccc; /* Gray border */
+    border-radius: 0.8vh; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 2.7vh; /* Add a top margin */
+    margin-bottom: 2.7vh; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -56,15 +55,15 @@ input[type=email] {
 input[type=password] {
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 500; /* weight */
-    font-size: 14px; /* size */
+    font-size: 2.3vh; /* size */
     color: #999999; /* color */
     width: 85%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
+    padding: 2vh; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #ccc; /* Gray border */
+    border-radius: 0.8vh; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 2.7vh; /* Add a top margin */
+    margin-bottom: 2.7vh; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -73,13 +72,13 @@ input[type=submit] {
     float: right;
     background-color: #A258B8; /* color of the button */
     color: white; /* color of the text */
-    padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
+    padding: 1.7vh 3.4vh; /* padding: 10px for top&bottom and 20px for left&right */
     border: none; /* for a sleek look, to avoid borders of html buttons */
-    border-radius: 4px; /* to round the button, used px and not % to round the corners and not the edges */
+    border-radius: 0.7vh; /* to round the button, used px and not % to round the corners and not the edges */
     cursor: pointer; /* indicates a link, cursor become a pointing hand */
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 700; /* weight */
-    font-size: 18px; /* size */
+    font-size: 3vh; /* size */
 }
 
 /* proprieties for when submit button is hovered */
@@ -90,15 +89,15 @@ input[type=submit]:hover {
 /* proprieties input of search bar*/
 input[type=search] {
     font-family: "Tajawal", sans-serif; /* font */
-    font-size: 12px; /* size */
+    font-size: 2vh; /* size */
     width: 100%; /* Full width */
     outline-color: #A258B8; /* when clicked and while in the search bar, there will be a #A258B8 border */
-    padding: 10px; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
-    border: 1px solid #A258B8; /* #A258B8 border */
-    border-radius: 5px; /* Rounded border, used px and not % to round the corners and not the edges */
+    padding: 1.7vh; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #A258B8; /* #A258B8 border */
+    border-radius: 0.8vh; /* Rounded border, used px and not % to round the corners and not the edges */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 13px; /* Add a top margin */
-    margin-bottom: 13px; /* Bottom margin */
+    margin-top: 2vh; /* Add a top margin */
+    margin-bottom: 2vh; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -107,7 +106,7 @@ input[type=search] {
 /* proprieties for the header */
 .navBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
-    height: 60px; /* set height */
+    height: 10vh; /* set height */
     position: relative; /* */
     display: flex; /* flex mode => elements go one after another on one single line */
     flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
@@ -123,9 +122,9 @@ input[type=search] {
 /* proprieties for the logo icon */
 .navBar__logo {
     float: left; /* arrange starting from left, after the last element from left */
-    height: 22px; /* fixed height */
-    width: 30px; /* fixed width*/
-    padding: 15px 0 0 30px; /* some padding*/
+    height: 3.7vh; /* fixed height */
+    width: 5vh; /* fixed width*/
+    padding: 2.5vh 0 0 5vh; /* some padding*/
 }
 
 /* proprieties for the text from the logo */
@@ -134,8 +133,8 @@ input[type=search] {
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 800;
-    font-size: 30px;
-    padding: 4px 0 0 4px;
+    font-size: 5vh;
+    padding: 0.7vh 0 0 0.6vh;
     text-decoration: none; /* text is originally a link. Used to not underline */
 }
 
@@ -144,23 +143,24 @@ input[type=search] {
     height: 90%; /* take 90% of the left's height */
     float: left; /* arrange starting from left, after the last element from left */
     width: 60%; /* take 60% of the left's width */
-    padding-left: 5px;
+    padding-left: 0.9vh;
+    border-radius: 1.7vh;
     display: flex; /* flex mode => elements go one after another on one single line */
 }
 
 /* proprieties of the search icon */
 .navBar__searchIcon {
-    height: 20px; /* set height */
-    width: 20px; /* set width */
-    padding: 17px 2px 0 0; /* padding */
-    margin-left: -25px; /* to overflow over the search bar*/
+    height: 3.3vh; /* set height */
+    width: 3.3vh; /* set width */
+    padding: 2.9vh 0.3vh 0 0; /* padding */
+    margin-left: -4.1vh; /* to overflow over the search bar*/
 }
 
 /* proprieties of the menu icon */
 .accordion__catIcon {
-    height: 27px;
-    width: 23px;
-    padding: 13px 2px 4px 5px;
+    height: 4.4vh;
+    width: 3.9vh;
+    padding: 2.2vh 0.3vh 0.7vh 0.8vh;
 }
 
 .accordion__catIcon:hover {
@@ -168,24 +168,26 @@ input[type=search] {
 }
 
 .accordion {
+    overflow: visible;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .accordion__cat {
-    grid-template-columns:auto auto auto auto;
+    z-index: 4;
+    grid-template-columns: auto auto auto auto;
     float: right;
-    margin-right: -40px;
+    margin-right: -6.7vh;
     display: none;
-    row-gap: 10px;
-    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
-    border-radius: 10px;
+    row-gap: 1.7vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.6vh;
     background-color: white;
     position: relative;
     width: 40%;
     height: 200%;
-    padding: 12px;
-    overflow: hidden;
+    padding: 2vh;
+    overflow: auto;
     box-sizing: border-box;
 }
 
@@ -194,15 +196,15 @@ input[type=search] {
 }
 
 .accordion__catBtn {
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 1.7vh;
+    column-gap: 1.7vh;
     cursor: pointer;
-    border: 1px solid rgba(171, 48, 236, 0.16);
-    border-radius: 10px;
+    border: 0.1vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.7vh;
     background-color: white;
     position: relative;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.8vh;
+    margin: 0.8vh;
     text-align: center;
     overflow: hidden;
     box-sizing: border-box;
@@ -219,47 +221,48 @@ input[type=search] {
 .navBar__pictureAccount {
     float: right; /* arrange starting from right, after the last element from left */
     position: relative;
-    height: 25px; /* fixed height */
-    width: 25px; /*fixed width */
+    height: 4.2vh; /* fixed height */
+    width: 4.2vh; /*fixed width */
     margin-right: 12%;
     border-radius: 100%; /* gives circle shape */
-    border: 1px solid #A258B8;
-    margin-top: 10px;
+    border: 0.2vh solid #A258B8;
+    margin-top: 1.6vh;
 }
+
 /* proprieties of the notification icon */
 .navBar__helpIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 37%;
-    margin-top: 3px;
-    padding: 10px;
+    margin-top: 0.5vh;
+    padding: 1.7vh;
 }
 
 /* proprieties of the notification icon */
 .navBar__aboutIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 37%;
-    margin-top: 9px;
-    padding: 5px 0 0 0;
+    margin-top: 1.3vh;
+    padding-top: 0.8vh;
 }
 
 /* proprieties of the notification icon */
 .accordion__notificationsIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 40%;
-    padding: 14px;
+    padding: 2.1vh;;
 }
 
 .accordion__notifications {
-    margin-right: -40px;
     display: none;
-    margin-top: 50px;
-    box-shadow: 5px 5px 5px rgb(57 18 78 / 31%);
-    border-radius: 10px;
+    margin-top: 8.4vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.7vh;
     background-color: white;
     position: absolute;
     width: 25%;
+    z-index: 4;
     height: 400%;
-    padding: 12px;
+    padding: 2vh;
     overflow: auto;
     box-sizing: border-box;
 }
@@ -270,24 +273,30 @@ input[type=search] {
 
 .accordion__notificationsText {
     cursor: pointer;
-    border: 1px solid rgba(171, 48, 236, 0.16);
-    border-radius: 10px;
+    border: 0.16vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.6vh;
     background-color: white;
     position: relative;
-    margin: auto;
-    text-align: center;
+    font-size: 2.4vh;
     vertical-align: middle;
     overflow: hidden;
+    padding: 0.5vh 2vh 0.5vh 2vh;
     box-sizing: border-box;
+    align-content: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* proprieties of notification text */
 .accordion__notificationsTitle {
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 3vh;
     color: #A258B8;
-    padding-right: 30px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .accordion__notificationsLeft {
@@ -300,12 +309,12 @@ input[type=search] {
 .navBar__userPicture {
     float: left;
     position: relative;
-    height: 30px;
-    width: 30px;
-    margin-top: 5px;
+    height: 5vh;
+    width: 5vh;
+    margin-top: 2.5vh;
     overflow: hidden;
     border-radius: 100%;
-    border: 1px solid #A258B8;
+    border: 0.16vh solid #A258B8;
 }
 
 .accordion__notificationsRight {
@@ -319,27 +328,31 @@ input[type=search] {
 .navBar__uploadIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 35%;
-    padding: 14px 0 12px 14px;
+    padding: 2.2vh 0 2vh 2vh;
 }
 
 /* proprieties of the trending button */
 .navBar__trendingBtn {
     float: right;
-    vertical-align: middle; /* vertical alignment */
-    text-align: center; /* horizontal alignment */
-    height: 45%; /* takes 45% of the left's height */
+    vertical-align: middle;
+    text-align: center;
+    height: 45%;
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
-    font-size: 15px;
-    color: #f2f2f2; /* color of the text */
-    text-decoration: none; /* text is originally a link. Used to not underline */
-    margin-top: 12px;
-    margin-bottom: 20px;
+    font-size: 2.2vh;
+    color: #f2f2f2;
+    text-decoration: none;
+    margin-top: 2vh;
+    margin-bottom: 3.4vh;
     background-color: #A258B8;
-    padding: 2px 2% 0 2%;
+    padding: 1% 2% 1% 2%;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 0.8vh;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* proprieties for when submit button is hovered */
 .navBar__trendingBtn:hover {
@@ -373,15 +386,18 @@ input[type=search] {
     height: 45%; /* takes 45% of the left's height */
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 2.5vh;
     color: #f2f2f2; /* color of the text */
     text-decoration: none; /* text is originally a link. Used to not underline */
-    margin-top: 25px;
-    /*margin-bottom: 20px;*/
+    margin-top: 4.1vh;
     background-color: #A258B8;
     padding: 0 2% 0 2%;
     box-sizing: content-box;
-    border-radius: 5px;
+    border-radius: 0.8vh;
+}
+
+.navBar__resetPasswdBtn:hover{
+    background-color: #954FA8;
 }
 /* proprieties for picture upload*/
 .background__profilePic {
@@ -391,7 +407,7 @@ input[type=search] {
     left: 15%; /* lets 15% of background div empty and then puts the photo */
     border-radius: 100%; /* makes it a circle */
     overflow: hidden;
-    border: 1px solid #A258B8;
+    border: 0.16vh solid #A258B8;
     display: flex;
 }
 
@@ -400,9 +416,9 @@ input[type=search] {
     color: #A258B8;
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
-    font-size: 25px;
-    padding-top: 4px;
-    padding-right: 4px;
+    font-size: 4.1vh;
+    padding-top: 0.7vh;
+    padding-right: 0.7vh;
 }
 
 /* proprieties of "Connect to another account" */
@@ -410,9 +426,9 @@ input[type=search] {
     color: rgba(97, 36, 133, 0.94);
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
-    font-size: 20px;
-    padding-top: 4px;
-    padding-right: 4px;
+    font-size: 3.4vh;
+    padding-top: 0.7vh;
+    padding-right: 0.7vh;
     text-align: center;
 }
 
@@ -420,7 +436,7 @@ input[type=search] {
 ::placeholder {
     font-family: "Tajawal", sans-serif;
     color: grey;
-    font-size: 12px;
+    font-size: 2vh;
 }
 
 /* style element with id=photo */
@@ -431,7 +447,7 @@ input[type=search] {
 
 /* style element with id=uploadBtn */
 #uploadBtn {
-    height: 40px;
+    height: 6.7vh;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -440,9 +456,9 @@ input[type=search] {
     text-align: center;
     background: rgba(162, 88, 184, 0.5);
     color: white;
-    line-height: 30px;
+    line-height: 5vh;
     font-family: Tajawal, sans-serif;
-    font-size: 15px;
+    font-size: 2.5vh;
     cursor: pointer;
     display: none; /* display only when hovered */
 }
