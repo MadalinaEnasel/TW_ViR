@@ -26,6 +26,7 @@ input[type="text"], textarea {
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 500; /* weight */
     font-size: 14px; /* size */
+    outline: none;
     color: #999999; /* color */
     width: 70%; /* Full width */
     padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
@@ -315,7 +316,6 @@ input[type="search"] {
 .background__columnRight {
     float: right;
     width: 30%;
-    background-color: #666666;
 }
 
 .background_mainVideo {
@@ -366,7 +366,7 @@ input[type="search"] {
     border-radius: 10px;
     background-color: white;
     position: absolute;
-    height: 40%;
+    height: 20%;
     padding: 0 12px 12px 12px;
     overflow: auto;
     box-sizing: border-box;
@@ -380,6 +380,15 @@ input[type="search"] {
     font-size: 2.3vh;
 }
 
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
 .background__comments {
     font-family: Tajawal, sans-serif;
     font-weight: 500;
@@ -387,9 +396,17 @@ input[type="search"] {
     padding-left: 10%;
 }
 
+.background__videoLeft{
+    float: left;
+    width: 10%;
+    padding-left: 9%;
+    display: block;
+}
+
 /* proprieties of userPicture, under the video */
 .background--userPicture {
     float: left;
+    display: block;
     position: relative;
     height: 25px;
     width: 25px;
@@ -400,13 +417,63 @@ input[type="search"] {
     z-index: -1;
 }
 
-.background__hashtags {
+/* proprieties of username text, under the video */
+.background__usernameText {
     float: left;
-    color: #3F729B;
+    display: block;
+    color: #999999;
     font-family: "Tajawal", sans-serif;
     font-size: 11px;
-    margin: 0;
     padding-right: 4px;
+    text-decoration: none;
+    margin: 7% 0 100% 0;
+    text-align: center;
+    /*margin-bottom: 10%;*/
+    padding-left: 17%;
+}
+
+.background__videoRight{
+    float: right;
+    width: 70%;
+    padding-right: 7%;
+    display: block;
+}
+
+.background__comment{
+    float:right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(178,48,243,0.08);
+    height: 90%;
+    width: 100%;
+}
+
+.background__commentText{
+    font-family: "Tajawal", sans-serif;
+    color: black;
+    padding: 0 2% 0 2%;
+    font-size: 3vh;
+}
+
+.background__video{
+    padding:0 5% 0 5%;
+    width: 45vh;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background__videoTitleRight{
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+    padding: 0 0 10% 5%;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
 }
 
 ::placeholder {
@@ -414,3 +481,5 @@ input[type="search"] {
     color: grey;
     font-size: 12px;
 }
+
+
