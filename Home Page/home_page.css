@@ -7,6 +7,83 @@ body {
     font-family: Tajawal, sans-serif;
 }
 
+label {
+    /* proprieties for text format for labels */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8; /* color of the text */
+}
+
+/* INPUT PROPRIETIES */
+
+/* proprieties for input text, select and textarea type */
+input[type=text], select, textarea {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 16px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* proprieties for input email type */
+input[type=email] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 16px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* proprieties for input password */
+input[type=password] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
+    width: 85%; /* Full width */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 16px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* proprieties for submit button */
+input[type=submit] {
+    float: right;
+    background-color: #A258B8; /* color of the button */
+    color: white; /* color of the text */
+    padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
+    border: none; /* for a sleek look, to avoid borders of html buttons */
+    border-radius: 4px; /* to round the button, used px and not % to round the corners and not the edges */
+    cursor: pointer; /* indicates a link, cursor become a pointing hand */
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 700; /* weight */
+    font-size: 18px; /* size */
+}
+
+/* proprieties for when submit button is hovered */
+input[type=submit]:hover {
+    background-color: #954FA8; /* color of the button */
+}
+
 /* proprieties input of search bar*/
 input[type=search] {
     font-family: "Tajawal", sans-serif; /* font */
@@ -27,7 +104,6 @@ input[type=search] {
 /* proprieties for the header */
 .navBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
-    overflow: hidden; /* when header overflows background, do not show it*/
     height: 60px; /* set height */
     position: relative; /* */
     display: flex; /* flex mode => elements go one after another on one single line */
@@ -42,7 +118,7 @@ input[type=search] {
 }
 
 /* proprieties for the logo icon */
-.navBar--logo {
+.navBar__logo {
     float: left; /* arrange starting from left, after the last element from left */
     height: 22px; /* fixed height */
     width: 30px; /* fixed width*/
@@ -50,7 +126,7 @@ input[type=search] {
 }
 
 /* proprieties for the text from the logo */
-.navBar--textLogo {
+.navBar__textLogo {
     float: left; /* arrange starting from left, after the last element from left */
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
@@ -78,10 +154,57 @@ input[type=search] {
 }
 
 /* proprieties of the menu icon */
-.navBar__catIcon {
+.accordion__catIcon {
     height: 27px;
     width: 23px;
     padding: 13px 2px 4px 5px;
+}
+
+.accordion__catIcon:hover {
+    background-image: linear-gradient(#A258B8, white);
+}
+
+.accordion {
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.accordion__cat {
+    z-index: 4;
+    grid-template-columns:auto auto auto auto;
+    float: right;
+    margin-right: -40px;
+    display: none;
+    row-gap: 10px;
+    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 200%;
+    padding: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.accordion__catBtn:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__catBtn {
+    row-gap: 10px;
+    column-gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(171, 48, 236, 0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* column that floats to the right in the navBar*/
@@ -102,12 +225,94 @@ input[type=search] {
     border: 1px solid #A258B8;
     margin-top: 10px;
 }
+/* proprieties of the notification icon */
+.navBar__helpIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 3px;
+    padding: 10px;
+}
 
 /* proprieties of the notification icon */
-.navBar__notificationsIcon {
+.navBar__aboutIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 9px;
+    padding: 5px 0 0 0;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 40%;
     padding: 14px;
+}
+
+.accordion__notifications {
+    margin-right: -40px;
+    display: none;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px rgb(57 18 78 / 31%);
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    width: 25%;
+    z-index: 4;
+    height: 400%;
+    padding: 12px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+    cursor: pointer;
+    border: 1px solid rgba(171, 48, 236, 0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+    padding-right: 30px;
+}
+
+.accordion__notificationsLeft {
+    width: 20%; /* of the underVideo */
+    display: grid;
+    height: 50%;
+    float: left;
+}
+
+.navBar__userPicture {
+    float: left;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+.accordion__notificationsRight {
+    float: right;
+    display: grid;
+    width: 80%; /* of the underVideo */
+    height: 50%; /* of the underVideo */
 }
 
 /* proprieties of the upload icon */
@@ -165,6 +370,7 @@ input[type=search] {
 .background__video {
     width: 90%; /* of the column */
     height: 133px;
+    overflow: hidden;
 }
 
 /* equivalent to row to background */
@@ -260,7 +466,3 @@ input[type=search] {
 .background__loadBtn:hover {
     box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
 }
-
-
-
-

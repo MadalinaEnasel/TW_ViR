@@ -1,5 +1,5 @@
 /*Imports the main font from Google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
 
 /* GENERAL PROPRIETIES */
 
@@ -21,74 +21,25 @@ label {
 /* INPUT PROPRIETIES */
 
 /* proprieties for input text, select and textarea type */
-input[type=text], select, textarea {
+input[type="text"], textarea {
+    float: left;
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 500; /* weight */
     font-size: 14px; /* size */
+    outline: none;
     color: #999999; /* color */
-    width: 100%; /* Full width */
+    width: 70%; /* Full width */
     padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 5px; /* Rounded borders */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
+    margin-left: 12px;
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for input email type */
-input[type=email] {
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 500; /* weight */
-    font-size: 14px; /* size */
-    color: #999999; /* color */
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for input password */
-input[type=password] {
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 500; /* weight */
-    font-size: 14px; /* size */
-    color: #999999; /* color */
-    width: 85%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for submit button */
-input[type=submit] {
-    float: right;
-    background-color: #A258B8; /* color of the button */
-    color: white; /* color of the text */
-    padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
-    border: none; /* for a sleek look, to avoid borders of html buttons */
-    border-radius: 4px; /* to round the button, used px and not % to round the corners and not the edges */
-    cursor: pointer; /* indicates a link, cursor become a pointing hand */
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 700; /* weight */
-    font-size: 18px; /* size */
-}
-
-/* proprieties for when submit button is hovered */
-input[type=submit]:hover {
-    background-color: #954FA8; /* color of the button */
 }
 
 /* proprieties input of search bar*/
-input[type=search] {
+input[type="search"] {
     font-family: "Tajawal", sans-serif; /* font */
     font-size: 12px; /* size */
     width: 100%; /* Full width */
@@ -226,6 +177,7 @@ input[type=search] {
     border: 1px solid #A258B8;
     margin-top: 10px;
 }
+
 /* proprieties of the notification icon */
 .navBar__helpIcon {
     float: right; /* arrange starting from right, after the last element from left */
@@ -350,103 +302,184 @@ input[type=search] {
 .background {
     overflow: hidden;
     margin: auto; /* some margins, auto so it splits equally */
-    width: 80%; /* takes up only 80% of the body's width */
+    width: 90%; /* takes up only 80% of the body's width */
+    /*background-color: brown;*/
 }
 
-/* column, there are two in the background div */
-.background__column {
+.background__columnLeft {
     float: left;
-    width: 50%; /* of the background block */
-    padding-top: 5%;
+    width: 70%;
+    /*background-color: #2691d9;*/
+    display: block;
 }
 
-/* Clear floats after the columns */
-.background__row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.navBar__resetPasswdBtn {
+.background__columnRight {
     float: right;
-    vertical-align: middle; /* vertical alignment */
-    text-align: center; /* horizontal alignment */
-    height: 45%; /* takes 45% of the left's height */
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 15px;
-    color: #f2f2f2; /* color of the text */
-    text-decoration: none; /* text is originally a link. Used to not underline */
-    margin-top: 25px;
-    /*margin-bottom: 20px;*/
-    background-color: #A258B8;
-    padding: 0 2% 0 2%;
-    box-sizing: content-box;
-    border-radius: 5px;
+    width: 30%;
 }
-/* proprieties for picture upload*/
-.background__profilePic {
-    height: 40%; /* of background div */
-    width: 40%; /* of background div */
+
+.background_mainVideo {
+    align-content: center;
+    width: 80%;
+    /*height: 90%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background__videoTitle {
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 4vh;
+    padding: 3% 0 0 10%;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
+.accordion__moreIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 17%;
+    width: 3vh;
+    margin-top: 5%;
+    padding: 0 10% 0 0;
+    z-index: 4;
+}
+
+.background__line {
+    align-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #999999;
+}
+
+.accordion__description {
+    float: right;
+    display: none;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    height: 20%;
+    padding: 0 12px 12px 12px;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+.background__description {
+    font-size: 2.3vh;
+}
+
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
+.background__comments {
+    font-family: Tajawal, sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    padding-left: 10%;
+}
+
+.background__videoLeft{
+    float: left;
+    width: 10%;
+    padding-left: 9%;
+    display: block;
+}
+
+/* proprieties of userPicture, under the video */
+.background--userPicture {
+    float: left;
+    display: block;
     position: relative;
-    left: 15%; /* lets 15% of background div empty and then puts the photo */
-    border-radius: 100%; /* makes it a circle */
+    height: 25px;
+    width: 25px;
     overflow: hidden;
+    border-radius: 100%;
     border: 1px solid #A258B8;
-    display: flex;
+    margin-left: 10%;
+    z-index: -1;
 }
 
-/* proprieties of "Want to change accounts?" */
-.background__textChgAccount {
-    color: #A258B8;
+/* proprieties of username text, under the video */
+.background__usernameText {
+    float: left;
+    display: block;
+    color: #999999;
     font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-    padding-top: 4px;
+    font-size: 11px;
     padding-right: 4px;
-}
-
-/* proprieties of "Connect to another account" */
-.background__textLnkChg {
-    color: rgba(97, 36, 133, 0.94);
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    padding-top: 4px;
-    padding-right: 4px;
+    text-decoration: none;
+    margin: 7% 0 100% 0;
     text-align: center;
+    /*margin-bottom: 10%;*/
+    padding-left: 17%;
 }
 
-/* style the placeholder */
+.background__videoRight{
+    float: right;
+    width: 70%;
+    padding-right: 7%;
+    display: block;
+}
+
+.background__comment{
+    float:right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(178,48,243,0.08);
+    height: 90%;
+    width: 100%;
+}
+
+.background__commentText{
+    font-family: "Tajawal", sans-serif;
+    color: black;
+    padding: 0 2% 0 2%;
+    font-size: 3vh;
+}
+
+.background__video{
+    padding:0 5% 0 5%;
+    width: 45vh;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background__videoTitleRight{
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+    padding: 0 0 10% 5%;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
 ::placeholder {
     font-family: "Tajawal", sans-serif;
     color: grey;
     font-size: 12px;
 }
-
-/* style element with id=photo */
-#photo {
-    height: 100%;
-    width: 100%;
-}
-
-/* style element with id=uploadBtn */
-#uploadBtn {
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* put button on the image */
-    text-align: center;
-    background: rgba(162, 88, 184, 0.5);
-    color: white;
-    line-height: 30px;
-    font-family: Tajawal, sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-    display: none; /* display only when hovered */
-}
-
-
 
 
