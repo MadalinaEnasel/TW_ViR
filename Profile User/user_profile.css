@@ -58,7 +58,7 @@ input[type=password] {
     font-weight: 500; /* weight */
     font-size: 14px; /* size */
     color: #999999; /* color */
-    width: 100%; /* Full width */
+    width: 85%; /* Full width */
     padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 5px; /* Rounded borders */
@@ -70,7 +70,7 @@ input[type=password] {
 
 /* proprieties for submit button */
 input[type=submit] {
-    float:right;
+    float: right;
     background-color: #A258B8; /* color of the button */
     color: white; /* color of the text */
     padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
@@ -105,7 +105,7 @@ input[type=search] {
 /* CLASSES */
 
 /* proprieties for the header */
-.menuBar {
+.navBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
     height: 60px; /* set height */
     position: relative; /* */
@@ -113,15 +113,15 @@ input[type=search] {
     flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
 }
 
-/* column that floats to the left in the menuBar*/
-.menuBar__left {
-    width: 70%; /* takes 70% of the menuBar's width */
+/* column that floats to the left in the navBar*/
+.navBar__left {
+    width: 70%; /* takes 70% of the navBar's width */
     height: 100%;
     float: left;
 }
 
 /* proprieties for the logo icon */
-.menuBar--logo {
+.navBar__logo {
     float: left; /* arrange starting from left, after the last element from left */
     height: 22px; /* fixed height */
     width: 30px; /* fixed width*/
@@ -129,7 +129,7 @@ input[type=search] {
 }
 
 /* proprieties for the text from the logo */
-.menuBar__textLogo {
+.navBar__textLogo {
     float: left; /* arrange starting from left, after the last element from left */
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
@@ -140,7 +140,7 @@ input[type=search] {
 }
 
 /* proprieties of the search bar */
-.menuBar__search {
+.navBar__search {
     height: 90%; /* take 90% of the left's height */
     float: left; /* arrange starting from left, after the last element from left */
     width: 60%; /* take 60% of the left's width */
@@ -149,7 +149,7 @@ input[type=search] {
 }
 
 /* proprieties of the search icon */
-.menuBar__searchIcon {
+.navBar__searchIcon {
     height: 20px; /* set height */
     width: 20px; /* set width */
     padding: 17px 2px 0 0; /* padding */
@@ -157,14 +157,14 @@ input[type=search] {
 }
 
 /* proprieties of the menu icon */
-.menuBar__catIcon {
+.accordion__catIcon {
     height: 27px;
     width: 23px;
     padding: 13px 2px 4px 5px;
 }
 
-.menuBar__catIcon:hover {
-    background-image: linear-gradient(#A258B8,white);
+.accordion__catIcon:hover {
+    background-image: linear-gradient(#A258B8, white);
 }
 
 .accordion {
@@ -172,7 +172,7 @@ input[type=search] {
     transition: 0.5s;
 }
 
-.menuBar__cat {
+.accordion__cat {
     grid-template-columns:auto auto auto auto;
     float: right;
     margin-right: -40px;
@@ -186,18 +186,18 @@ input[type=search] {
     height: 200%;
     padding: 12px;
     overflow: hidden;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-.menuBar__catBtn:hover{
+.accordion__catBtn:hover {
     background-color: #f2f2f2;
 }
 
-.menuBar__catBtn{
+.accordion__catBtn {
     row-gap: 10px;
     column-gap: 10px;
     cursor: pointer;
-    border: 1px solid rgba(171,48,236,0.16);
+    border: 1px solid rgba(171, 48, 236, 0.16);
     border-radius: 10px;
     background-color: white;
     position: relative;
@@ -205,18 +205,18 @@ input[type=search] {
     margin: 5px;
     text-align: center;
     overflow: hidden;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-/* column that floats to the right in the menuBar*/
-.menuBar__right {
-    width: 30%; /* takes 30% of the menuBar's width */
+/* column that floats to the right in the navBar*/
+.navBar__right {
+    width: 30%; /* takes 30% of the navBar's width */
     height: 100%;
     float: right;
 }
 
 /* proprieties of the account icon */
-.menuBar__pictureAccount {
+.navBar__pictureAccount {
     float: right; /* arrange starting from right, after the last element from left */
     position: relative;
     height: 25px; /* fixed height */
@@ -226,23 +226,104 @@ input[type=search] {
     border: 1px solid #A258B8;
     margin-top: 10px;
 }
+/* proprieties of the notification icon */
+.navBar__helpIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 3px;
+    padding: 10px;
+}
 
 /* proprieties of the notification icon */
-.menuBar__notificationsIcon {
+.navBar__aboutIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 9px;
+    padding: 5px 0 0 0;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 40%;
     padding: 14px;
 }
 
+.accordion__notifications {
+    margin-right: -40px;
+    display: none;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px rgb(57 18 78 / 31%);
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    width: 25%;
+    height: 400%;
+    padding: 12px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+    cursor: pointer;
+    border: 1px solid rgba(171, 48, 236, 0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+    padding-right: 30px;
+}
+
+.accordion__notificationsLeft {
+    width: 20%; /* of the underVideo */
+    display: grid;
+    height: 50%;
+    float: left;
+}
+
+.navBar__userPicture {
+    float: left;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+.accordion__notificationsRight {
+    float: right;
+    display: grid;
+    width: 80%; /* of the underVideo */
+    height: 50%; /* of the underVideo */
+}
+
 /* proprieties of the upload icon */
-.menuBar__uploadIcon {
+.navBar__uploadIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 35%;
     padding: 14px 0 12px 14px;
 }
 
 /* proprieties of the trending button */
-.menuBar__trendingBtn {
+.navBar__trendingBtn {
     float: right;
     vertical-align: middle; /* vertical alignment */
     text-align: center; /* horizontal alignment */
@@ -261,7 +342,7 @@ input[type=search] {
 }
 
 /* proprieties for when submit button is hovered */
-.menuBar__trendingBtn:hover {
+.navBar__trendingBtn:hover {
     background-color: #954FA8; /* color of the button */
 }
 
@@ -285,7 +366,23 @@ input[type=search] {
     display: table;
     clear: both;
 }
-
+.navBar__resetPasswdBtn {
+    float: right;
+    vertical-align: middle; /* vertical alignment */
+    text-align: center; /* horizontal alignment */
+    height: 45%; /* takes 45% of the left's height */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: #f2f2f2; /* color of the text */
+    text-decoration: none; /* text is originally a link. Used to not underline */
+    margin-top: 25px;
+    /*margin-bottom: 20px;*/
+    background-color: #A258B8;
+    padding: 0 2% 0 2%;
+    box-sizing: content-box;
+    border-radius: 5px;
+}
 /* proprieties for picture upload*/
 .background__profilePic {
     height: 40%; /* of background div */
@@ -296,35 +393,6 @@ input[type=search] {
     overflow: hidden;
     border: 1px solid #A258B8;
     display: flex;
-}
-
-/* proprieties of notification text */
-.background__textNotifications {
-    font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #A258B8;
-    padding-bottom: 40px;
-    padding-right: 30px;
-}
-
-/* proprieties of view (notifications) */
-.background__viewBtn {
-    color: #f2f2f2; /* text color */
-    background-color: #A258B8;
-    border-radius: 5px;
-    box-sizing: content-box;
-    align-content: center;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    padding: 0 12px;
-    text-decoration: none;
-}
-
-/* when hovered changes color */
-.background__viewBtn:hover {
-    background-color: #954FA8;
 }
 
 /* proprieties of "Want to change accounts?" */
