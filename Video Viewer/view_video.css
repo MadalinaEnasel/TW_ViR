@@ -1,0 +1,416 @@
+/*Imports the main font from Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+/* GENERAL PROPRIETIES */
+
+body {
+    /* Sets margin to 0 => body extends in every corner */
+    margin: 0;
+    /* Sets all text to font Tajawal */
+    font-family: Tajawal, sans-serif;
+}
+
+label {
+    /* proprieties for text format for labels */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8; /* color of the text */
+}
+
+/* INPUT PROPRIETIES */
+
+/* proprieties for input text, select and textarea type */
+input[type="text"], textarea {
+    float: left;
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 500; /* weight */
+    font-size: 14px; /* size */
+    color: #999999; /* color */
+    width: 70%; /* Full width */
+    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded borders */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-bottom: 16px; /* Bottom margin */
+    margin-left: 12px;
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* proprieties input of search bar*/
+input[type="search"] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-size: 12px; /* size */
+    width: 100%; /* Full width */
+    outline-color: #A258B8; /* when clicked and while in the search bar, there will be a #A258B8 border */
+    padding: 10px; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
+    border: 1px solid #A258B8; /* #A258B8 border */
+    border-radius: 5px; /* Rounded border, used px and not % to round the corners and not the edges */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 13px; /* Add a top margin */
+    margin-bottom: 13px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* CLASSES */
+
+/* proprieties for the header */
+.navBar {
+    background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
+    height: 60px; /* set height */
+    position: relative; /* */
+    display: flex; /* flex mode => elements go one after another on one single line */
+    flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
+}
+
+/* column that floats to the left in the navBar*/
+.navBar__left {
+    width: 70%; /* takes 70% of the navBar's width */
+    height: 100%;
+    float: left;
+}
+
+/* proprieties for the logo icon */
+.navBar__logo {
+    float: left; /* arrange starting from left, after the last element from left */
+    height: 22px; /* fixed height */
+    width: 30px; /* fixed width*/
+    padding: 15px 0 0 30px; /* some padding*/
+}
+
+/* proprieties for the text from the logo */
+.navBar__textLogo {
+    float: left; /* arrange starting from left, after the last element from left */
+    color: white; /* color of the text */
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 800;
+    font-size: 30px;
+    padding: 4px 0 0 4px;
+    text-decoration: none; /* text is originally a link. Used to not underline */
+}
+
+/* proprieties of the search bar */
+.navBar__search {
+    height: 90%; /* take 90% of the left's height */
+    float: left; /* arrange starting from left, after the last element from left */
+    width: 60%; /* take 60% of the left's width */
+    padding-left: 5px;
+    display: flex; /* flex mode => elements go one after another on one single line */
+}
+
+/* proprieties of the search icon */
+.navBar__searchIcon {
+    height: 20px; /* set height */
+    width: 20px; /* set width */
+    padding: 17px 2px 0 0; /* padding */
+    margin-left: -25px; /* to overflow over the search bar*/
+}
+
+/* proprieties of the menu icon */
+.accordion__catIcon {
+    height: 27px;
+    width: 23px;
+    padding: 13px 2px 4px 5px;
+}
+
+.accordion__catIcon:hover {
+    background-image: linear-gradient(#A258B8, white);
+}
+
+.accordion {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.accordion__cat {
+    grid-template-columns:auto auto auto auto;
+    float: right;
+    margin-right: -40px;
+    display: none;
+    row-gap: 10px;
+    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 200%;
+    padding: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.accordion__catBtn:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__catBtn {
+    row-gap: 10px;
+    column-gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(171, 48, 236, 0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* column that floats to the right in the navBar*/
+.navBar__right {
+    width: 30%; /* takes 30% of the navBar's width */
+    height: 100%;
+    float: right;
+}
+
+/* proprieties of the account icon */
+.navBar__pictureAccount {
+    float: right; /* arrange starting from right, after the last element from left */
+    position: relative;
+    height: 25px; /* fixed height */
+    width: 25px; /*fixed width */
+    margin-right: 12%;
+    border-radius: 100%; /* gives circle shape */
+    border: 1px solid #A258B8;
+    margin-top: 10px;
+}
+
+/* proprieties of the notification icon */
+.navBar__helpIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 3px;
+    padding: 10px;
+}
+
+/* proprieties of the notification icon */
+.navBar__aboutIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 9px;
+    padding: 5px 0 0 0;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 40%;
+    padding: 14px;
+}
+
+.accordion__notifications {
+    margin-right: -40px;
+    display: none;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px rgb(57 18 78 / 31%);
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    width: 25%;
+    height: 400%;
+    padding: 12px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+    cursor: pointer;
+    border: 1px solid rgba(171, 48, 236, 0.16);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+    padding-right: 30px;
+}
+
+.accordion__notificationsLeft {
+    width: 20%; /* of the underVideo */
+    display: grid;
+    height: 50%;
+    float: left;
+}
+
+.navBar__userPicture {
+    float: left;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+.accordion__notificationsRight {
+    float: right;
+    display: grid;
+    width: 80%; /* of the underVideo */
+    height: 50%; /* of the underVideo */
+}
+
+/* proprieties of the upload icon */
+.navBar__uploadIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 35%;
+    padding: 14px 0 12px 14px;
+}
+
+/* proprieties of the trending button */
+.navBar__trendingBtn {
+    float: right;
+    vertical-align: middle; /* vertical alignment */
+    text-align: center; /* horizontal alignment */
+    height: 45%; /* takes 45% of the left's height */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: #f2f2f2; /* color of the text */
+    text-decoration: none; /* text is originally a link. Used to not underline */
+    margin-top: 12px;
+    margin-bottom: 20px;
+    background-color: #A258B8;
+    padding: 2px 2% 0 2%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* proprieties for when submit button is hovered */
+.navBar__trendingBtn:hover {
+    background-color: #954FA8; /* color of the button */
+}
+
+/* for a neat arrangement in the center of the screen, oes not take all the body */
+.background {
+    overflow: hidden;
+    margin: auto; /* some margins, auto so it splits equally */
+    width: 90%; /* takes up only 80% of the body's width */
+    /*background-color: brown;*/
+}
+
+.background__columnLeft {
+    float: left;
+    width: 70%;
+    /*background-color: #2691d9;*/
+    display: block;
+}
+
+.background__columnRight {
+    float: right;
+    width: 30%;
+    background-color: #666666;
+}
+
+.background_mainVideo {
+    align-content: center;
+    width: 80%;
+    /*height: 90%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background__videoTitle {
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 4vh;
+    padding: 3% 0 0 10%;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
+.accordion__moreIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 17%;
+    width: 3vh;
+    margin-top: 5%;
+    padding: 0 10% 0 0;
+    z-index: 4;
+}
+
+.background__line {
+    align-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #999999;
+}
+
+.accordion__description {
+    float: right;
+    display: none;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    height: 40%;
+    padding: 0 12px 12px 12px;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+.background__description {
+    font-size: 2.3vh;
+}
+
+.background__comments {
+    font-family: Tajawal, sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    padding-left: 10%;
+}
+
+/* proprieties of userPicture, under the video */
+.background--userPicture {
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+    margin-left: 10%;
+    z-index: -1;
+}
+
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
+::placeholder {
+    font-family: "Tajawal", sans-serif;
+    color: grey;
+    font-size: 12px;
+}
