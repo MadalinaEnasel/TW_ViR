@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: Tajawal, sans-serif;
+    height: 1000px;
 }
 
 .background {
@@ -277,35 +278,154 @@ input[type=search] {
 
 .container_clipuri{
     margin-top: 5%;
-    height: 100%;
-    width: 80%;
-    background-color: #954FA8;
+    height: 80%;
+    width: 70%;
+
+    margin-left: 10px;
+    margin-bottom: 10 px;
+    margin-right: 10px;
+ 
 }
 
-.column_clipuri::content{
+.column_clipuri{
     float: left;
-    width: 50%;
+    height: 80%;
+    width: 40%;
+    padding-top: 0%;
+    background-color: white;
+    display: flex;
+    -ms-flex-item-align: center;
+    
+}
+
+
+.row_clipuri{
+
+    margin-left: 10px;
+    height: 40%;
+    width: 100%;
     padding-top: 5%;
     background-color: white;
+  
 }
-
-
-.row_clipuri::content{
-
-    height: 30%;
-    width: 50%;
-    padding-top: 5%;
-    background-color: aqua;
-}
-
-.row_clipuri_info::content{
-    height: 50%;
-    padding-top: 5%;
+/*
+.row_clipuri_descriere{
+    float:none;
+    display: flex;
+    height: 40%;
     width: 100%;
-    margin: auto auto auto auto;
+    margin-top: 5%;
     font-family: "Tajawal", sans-serif;
-    font-size: 0%;
-    color: #954FA8;
-    background-color: aquamarine;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    align-self: flex-start;
+    word-spacing: normal;
+    margin-left: 0;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+
+}*/
+.column_info{
+    float: right;
+    display:flex;
+    height: 100%;
+    width: 60%;
+   
+    
+    
+
+}
+/*
+.row_clipuri_info{
+    float:none;
+    display:flex;
+    height: 40%;
+    width: 100%;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    color: black;
+    align-self: flex-end;   
+    overflow: hidden;
+    position: relative;
+   
+   
+}
+*/
+.user_picture {
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+
+
+.row_video_left{
+    width: 15%;
+    display: grid;
+    height: 100%;
+    float: left;
+    align-self: flex-end;
+    background: linear-gradient(white,#FFE8FF,white);
+  
+    
+}
+
+.row_video_right{
+    float:right;
+    display: grid;
+    width: 85%;
+    height: 100%;
+    align-self: flex-end;
+    background: linear-gradient(white,#FFE8FF,white);
+}
+
+.text__description{
+    float:left;
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    /*padding-top: 4px;*/
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+    margin:0;
+
+}
+
+.date{
+    float:left;
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    margin:0;
+    padding-right: 4px;
+}
+.container_titlu{
+    height: auto;
+    width: auto;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #A258B8;
+
+}
+.text__title{
+    float:left;
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    /*padding-top: 4px;*/
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+    margin:0;
 
 }
