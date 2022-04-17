@@ -14,12 +14,13 @@
 .background{
     box-sizing: border-box;
     height: 50%;
-    width: 100%;
+    width: 800px;
     align-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
     top:100px;
     overflow: hidden;
+    
    
   }
    
@@ -35,7 +36,9 @@
   }
 */
   .panel {
-    width: 60%;
+
+    
+    width:800px;
     height: 100%;
     background: linear-gradient(#616ED0,white);
     box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
@@ -43,7 +46,7 @@
     overflow: hidden;
     align-self: center;
     margin-right: 10px;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 20%;
 
   }
@@ -198,6 +201,10 @@
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+
+
 label {
     /* proprieties for text format for labels */
     font-family: "Tajawal", sans-serif;
@@ -208,259 +215,400 @@ label {
 
 /* INPUT PROPRIETIES */
 
-/* proprieties for input text, select and textarea type */
-input[type=text], select, textarea {
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 500; /* weight */
-    font-size: 14px; /* size */
-    color: #999999; /* color */
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for input email type */
-input[type=email] {
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 500; /* weight */
-    font-size: 14px; /* size */
-    color: #999999; /* color */
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for input password */
-input[type=password] {
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 500; /* weight */
-    font-size: 14px; /* size */
-    color: #999999; /* color */
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding, same in all four directions: top, bottom, left, right */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 5px; /* Rounded borders */
-    box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 16px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* proprieties for submit button */
-input[type=submit] {
-    float:right;
-    background-color: #A258B8; /* color of the button */
-    color: white; /* color of the text */
-    padding: 10px 20px; /* padding: 10px for top&bottom and 20px for left&right */
-    border: none; /* for a sleek look, to avoid borders of html buttons */
-    border-radius: 4px; /* to round the button, used px and not % to round the corners and not the edges */
-    cursor: pointer; /* indicates a link, cursor become a pointing hand */
-    font-family: "Tajawal", sans-serif; /* font */
-    font-weight: 700; /* weight */
-    font-size: 18px; /* size */
-}
-
-/* proprieties for when submit button is hovered */
-input[type=submit]:hover {
-    background-color: #954FA8; /* color of the button */
-}
-
 /* proprieties input of search bar*/
 input[type=search] {
     font-family: "Tajawal", sans-serif; /* font */
-    font-size: 12px; /* size */
+    font-size: 2vh; /* size */
     width: 100%; /* Full width */
     outline-color: #A258B8; /* when clicked and while in the search bar, there will be a #A258B8 border */
-    padding: 10px; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
-    border: 1px solid #A258B8; /* #A258B8 border */
-    border-radius: 5px; /* Rounded border, used px and not % to round the corners and not the edges */
+    padding: 1.7vh; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #A258B8; /* #A258B8 border */
+    border-radius: 0.8vh; /* Rounded border, used px and not % to round the corners and not the edges */
     box-sizing: border-box; /* How long are the boxes*/
-    margin-top: 13px; /* Add a top margin */
-    margin-bottom: 13px; /* Bottom margin */
+    margin-top: 2vh; /* Add a top margin */
+    margin-bottom: 2vh; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* CLASSES */
 
 /* proprieties for the header */
-.menuBar {
+.navBar {
     background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
-    height: 60px; /* set height */
+    height: 10vh; /* set height */
     position: relative; /* */
     display: flex; /* flex mode => elements go one after another on one single line */
     flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
 }
 
-/* column that floats to the left in the menuBar*/
-.menuBar__left {
-    width: 70%; /* takes 70% of the menuBar's width */
+/* column that floats to the left in the navBar*/
+.navBar__left {
+    width: 70%; /* takes 70% of the navBar's width */
     height: 100%;
     float: left;
 }
 
 /* proprieties for the logo icon */
-.menuBar--logo {
+.navBar__logo {
     float: left; /* arrange starting from left, after the last element from left */
-    height: 22px; /* fixed height */
-    width: 30px; /* fixed width*/
-    padding: 15px 0 0 30px; /* some padding*/
+    height: 3.7vh; /* fixed height */
+    width: 5vh; /* fixed width*/
+    padding: 2.5vh 0 0 5vh; /* some padding*/
 }
 
 /* proprieties for the text from the logo */
-.menuBar__textLogo {
+.navBar__textLogo {
     float: left; /* arrange starting from left, after the last element from left */
     color: white; /* color of the text */
     font-family: "Tajawal", sans-serif; /* font */
     font-weight: 800;
-    font-size: 30px;
-    padding: 4px 0 0 4px;
+    font-size: 5vh;
+    padding: 0.7vh 0 0 0.6vh;
     text-decoration: none; /* text is originally a link. Used to not underline */
 }
 
 /* proprieties of the search bar */
-.menuBar__search {
+.navBar__search {
     height: 90%; /* take 90% of the left's height */
     float: left; /* arrange starting from left, after the last element from left */
     width: 60%; /* take 60% of the left's width */
-    padding-left: 5px;
+    padding-left: 0.9vh;
+    border-radius: 1.7vh;
     display: flex; /* flex mode => elements go one after another on one single line */
 }
 
 /* proprieties of the search icon */
-.menuBar__searchIcon {
-    height: 20px; /* set height */
-    width: 20px; /* set width */
-    padding: 17px 2px 0 0; /* padding */
-    margin-left: -25px; /* to overflow over the search bar*/
+.navBar__searchIcon {
+    height: 3.3vh; /* set height */
+    width: 3.3vh; /* set width */
+    padding: 2.9vh 0.3vh 0 0; /* padding */
+    margin-left: -4.1vh; /* to overflow over the search bar*/
 }
 
 /* proprieties of the menu icon */
-.menuBar__catIcon {
-    height: 27px;
-    width: 23px;
-    padding: 13px 2px 4px 5px;
+.accordion__catIcon {
+    height: 4.4vh;
+    width: 3.9vh;
+    padding: 2.2vh 0.3vh 0.7vh 0.8vh;
 }
 
-.menuBar__catIcon:hover {
-    background-image: linear-gradient(#A258B8,white);
+.accordion__catIcon:hover {
+    background-image: linear-gradient(#A258B8, white);
 }
 
 .accordion {
+    overflow: visible;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.menuBar__cat {
-    grid-template-columns:auto auto auto auto;
+.accordion__cat {
+    z-index: 4;
+    grid-template-columns: auto auto auto auto;
     float: right;
-    margin-right: -40px;
+    margin-right: -6.7vh;
     display: none;
-    row-gap: 10px;
-    box-shadow: 5px 5px 5px rgba(57, 18, 78, 0.31);
-    border-radius: 10px;
+    row-gap: 1.7vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.6vh;
     background-color: white;
     position: relative;
     width: 40%;
     height: 200%;
-    padding: 12px;
-    overflow: hidden;
-    box-sizing:border-box;
+    padding: 2vh;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
-.menuBar__catBtn:hover{
+.accordion__catBtn:hover {
     background-color: #f2f2f2;
 }
 
-.menuBar__catBtn{
-    row-gap: 10px;
-    column-gap: 10px;
+.accordion__catBtn {
+    row-gap: 1.7vh;
+    column-gap: 1.7vh;
     cursor: pointer;
-    border: 1px solid rgba(171,48,236,0.16);
-    border-radius: 10px;
+    border: 0.1vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.7vh;
     background-color: white;
     position: relative;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.8vh;
+    margin: 0.8vh;
     text-align: center;
     overflow: hidden;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-/* column that floats to the right in the menuBar*/
-.menuBar__right {
-    width: 30%; /* takes 30% of the menuBar's width */
+/* column that floats to the right in the navBar*/
+.navBar__right {
+    width: 30%; /* takes 30% of the navBar's width */
     height: 100%;
     float: right;
 }
 
 /* proprieties of the account icon */
-.menuBar__pictureAccount {
+.navBar__pictureAccount {
     float: right; /* arrange starting from right, after the last element from left */
     position: relative;
-    height: 25px; /* fixed height */
-    width: 25px; /*fixed width */
+    height: 4.2vh; /* fixed height */
+    width: 4.2vh; /*fixed width */
     margin-right: 12%;
     border-radius: 100%; /* gives circle shape */
-    border: 1px solid #A258B8;
-    margin-top: 10px;
+    border: 0.2vh solid #A258B8;
+    margin-top: 1.6vh;
 }
 
 /* proprieties of the notification icon */
-.menuBar__notificationsIcon {
+.navBar__helpIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 0.5vh;
+    padding: 1.7vh;
+}
+
+/* proprieties of the notification icon */
+.navBar__aboutIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 1.3vh;
+    padding-top: 0.8vh;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 40%;
-    padding: 14px;
+    padding: 2.1vh;;
+}
+
+.accordion__notifications {
+    display: none;
+    margin-top: 8.4vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.7vh;
+    background-color: white;
+    position: absolute;
+    width: 25%;
+    z-index: 4;
+    height: 400%;
+    padding: 2vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+    cursor: pointer;
+    border: 0.16vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.6vh;
+    background-color: white;
+    position: relative;
+    font-size: 2.4vh;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0.5vh 2vh 0.5vh 2vh;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 3vh;
+    color: #A258B8;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion__notificationsLeft {
+    width: 20%; /* of the underVideo */
+    display: grid;
+    height: 50%;
+    float: left;
+}
+
+.navBar__userPicture {
+    float: left;
+    position: relative;
+    height: 5vh;
+    width: 5vh;
+    margin-top: 2.5vh;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 0.16vh solid #A258B8;
+}
+
+.accordion__notificationsRight {
+    float: right;
+    display: grid;
+    width: 80%; /* of the underVideo */
+    height: 50%; /* of the underVideo */
 }
 
 /* proprieties of the upload icon */
-.menuBar__uploadIcon {
+.navBar__uploadIcon {
     float: right; /* arrange starting from right, after the last element from left */
     height: 35%;
-    padding: 14px 0 12px 14px;
+    padding: 2.2vh 0 2vh 2vh;
 }
 
 /* proprieties of the trending button */
-.menuBar__trendingBtn {
+.navBar__trendingBtn {
     float: right;
-    vertical-align: middle; /* vertical alignment */
-    text-align: center; /* horizontal alignment */
-    height: 45%; /* takes 45% of the left's height */
+    vertical-align: middle;
+    text-align: center;
+    height: 45%;
     font-family: "Tajawal", sans-serif;
     font-weight: 800;
-    font-size: 15px;
-    color: #f2f2f2; /* color of the text */
-    text-decoration: none; /* text is originally a link. Used to not underline */
-    margin-top: 12px;
-    margin-bottom: 20px;
+    font-size: 2.2vh;
+    color: #f2f2f2;
+    text-decoration: none;
+    margin-top: 2vh;
+    margin-bottom: 3.4vh;
     background-color: #A258B8;
-    padding: 2px 2% 0 2%;
+    padding: 1% 2% 1% 2%;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 0.8vh;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
 /* proprieties for when submit button is hovered */
-.menuBar__trendingBtn:hover {
+.navBar__trendingBtn:hover {
     background-color: #954FA8; /* color of the button */
 }
 
 /* for a neat arrangement in the center of the screen, oes not take all the body */
+.background {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow: hidden;
+    width: 80%; /* takes up only 80% of the body's width */
+    align-content: center;
+    margin: auto;
+}
 
+.background__detailedVideo {
+    float: left;
+    width: 250px;
+    height: 200px;
+    padding-top: 5%;
+}
 
-/* style the placeholder */
-::placeholder {
+/* Clear floats after the columns */
+.background__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* proprieties for videos */
+.background__video {
+    width: 90%; /* of the column */
+    height: 133px;
+    overflow: hidden;
+}
+
+/* equivalent to row to background */
+.background__underVideo {
+    overflow: hidden;
+    width: 90%; /* of the video */
+    position: relative;
+    display: flex;
+}
+
+/* equivalent with left to navBar */
+.background__underVideoLeft {
+    width: 15%; /* of the underVideo */
+    display: grid;
+    height: 100%; /* of the underVideo */
+    float: left;
+}
+
+/* equivalent with right to navBar*/
+.background__underVideoRight {
+    float: right;
+    display: grid;
+    width: 85%; /* of the underVideo */
+    height: 100%; /* of the underVideo */
+}
+
+/* proprieties of userPicture, under the video */
+.background--userPicture {
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+/* proprieties of username text, under the video */
+.background__usernameText {
+    float: left;
+    color: #999999;
     font-family: "Tajawal", sans-serif;
-    color: grey;
+    font-size: 11px;
+    padding-right: 4px;
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* proprieties of title, under the video */
+.background__title {
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
     font-size: 12px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* proprieties of hashtags, under the video */
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
+/* proprieties of "Load More.." */
+.background__loadBtn {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.6vh;
+    text-decoration: none;
+    padding-block-start: 2vh;
+    margin-bottom: 8.4vh;
+    border-radius: 0.8vh;
+    box-sizing: content-box;
+    border: none;
+    font-family: "Tajawal", sans-serif;
+    font-size: 3vh;
+    color: #A258B8;
+    background-color: transparent;
+}
+
+/* when hovered adds shadow */
+.background__loadBtn:hover {
+    box-shadow: 0.8vh 0.8vh 0.8vh rgba(57, 18, 78, 0.31);
 }
 
 

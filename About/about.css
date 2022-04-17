@@ -1,194 +1,9 @@
+/* /* /* @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+/*Imports the main font from Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
-
-
-.background {
-    padding: 0.5%;
-    margin: 0 auto auto;
-    top: 0;
-    left: 5%;
-    width: 80%;
-    height: 100vh;
-   
-}
-
-
-
-
-
-
-
-
-
-::placeholder {
-    font-family: "Tajawal", sans-serif;
-    color: grey;
-    font-size: 12px;
-}
-
-
-.container_clipuri{
-    margin-top: 5%;
-    height: 80%;
-    width: 70%;
-    display: block;
-    margin-left: 10px;
-    margin-bottom: 10 px;
-    margin-right: 10px;
- 
-}
-
-.column_clipuri{
-    float: left;
-    height: 80%;
-    width: 40%;
-    padding-top: 0%;
-    background-color: white;
-    display: flex;
-    -ms-flex-item-align: center;
-    
-}
-
-
-.row_clipuri{
-
-    margin-left: 10px;
-    height: 40%;
-    width: 100%;
-    padding-top: 5%;
-    background-color: white;
-  
-}
-/*
-.row_clipuri_descriere{
-    float:none;
-    display: flex;
-    height: 40%;
-    width: 100%;
-    margin-top: 5%;
-    font-family: "Tajawal", sans-serif;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    align-self: flex-start;
-    word-spacing: normal;
-    margin-left: 0;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-
-}*/
-.column_info{
-    float: right;
-    display:flex;
-    height: 100%;
-    width: 60%;
-   
-    
-    
-
-}
-/*
-.row_clipuri_info{
-    float:none;
-    display:flex;
-    height: 40%;
-    width: 100%;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    color: black;
-    align-self: flex-end;   
-    overflow: hidden;
-    position: relative;
-   
-   
-}
-*/
-.user_picture {
-    float: left;
-    position: relative;
-    height: 25px;
-    width: 25px;
-    overflow: hidden;
-    border-radius: 100%;
-    border: 1px solid #A258B8;
-}
-
-
-
-.row_video_left{
-    width: 15%;
-    display: grid;
-    height: 100%;
-    float: left;
-    align-self: flex-end;
-    background: linear-gradient(white,#FFE8FF,white);
-  
-    
-}
-
-.row_video_right{
-    float:right;
-    display: grid;
-    width: 85%;
-    height: 100%;
-    align-self: flex-end;
-    background: linear-gradient(white,#FFE8FF,white);
-}
-
-.text__description{
-    float:left;
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    /*padding-top: 4px;*/
-    padding-right: 4px;
-    text-align: initial;
-    text-decoration: none;
-    margin:0;
-
-}
-
-.date{
-    float:left;
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    margin:0;
-    padding-right: 4px;
-}
-.container_titlu{
-    height: auto;
-    width: auto;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #A258B8;
-
-}
-.text__title{
-    float:left;
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    /*padding-top: 4px;*/
-    padding-right: 4px;
-    text-align: initial;
-    text-decoration: none;
-    margin:0;
-
-}
-
-
-
-
-
-
-
-
-
+/* GENERAL PROPRIETIES */
 
 body {
     /* Sets margin to 0 => body extends in every corner */
@@ -479,3 +294,261 @@ input[type=search] {
 .navBar__trendingBtn:hover {
     background-color: #954FA8; /* color of the button */
 }
+
+/* for a neat arrangement in the center of the screen, oes not take all the body */
+.background {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow: auto;
+    width: 100%; /* takes up only 80% of the body's width */
+    align-content: center;
+    margin: auto;
+
+}
+
+.background__detailedVideo {
+    float: left;
+    width: 250px;
+    height: 200px;
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.background__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* proprieties for videos */
+.background__video {
+    width: 90%; /* of the column */
+    height: 133px;
+    overflow: hidden;
+}
+
+/* equivalent to row to background */
+.background__underVideo {
+    overflow: hidden;
+    width: 90%; /* of the video */
+    position: relative;
+    display: flex;
+}
+
+/* equivalent with left to navBar */
+.background__underVideoLeft {
+    width: 15%; /* of the underVideo */
+    display: grid;
+    height: 100%; /* of the underVideo */
+    float: left;
+}
+
+/* equivalent with right to navBar*/
+.background__underVideoRight {
+    float: right;
+    display: grid;
+    width: 85%; /* of the underVideo */
+    height: 100%; /* of the underVideo */
+}
+
+/* proprieties of userPicture, under the video */
+.background--userPicture {
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+/* proprieties of username text, under the video */
+.background__usernameText {
+    float: left;
+    color: #999999;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    padding-right: 4px;
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* proprieties of title, under the video */
+.background__title {
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* proprieties of hashtags, under the video */
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
+/* proprieties of "Load More.." */
+.background__loadBtn {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.6vh;
+    text-decoration: none;
+    padding-block-start: 2vh;
+    margin-bottom: 8.4vh;
+    border-radius: 0.8vh;
+    box-sizing: content-box;
+    border: none;
+    font-family: "Tajawal", sans-serif;
+    font-size: 3vh;
+    color: #A258B8;
+    background-color: transparent;
+}
+
+/* when hovered adds shadow */
+.background__loadBtn:hover {
+    box-shadow: 0.8vh 0.8vh 0.8vh rgba(57, 18, 78, 0.31);
+}
+
+
+
+
+
+
+.landing_image
+{
+  
+   margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    right: 20px;
+    left: 100px;
+   /*right: 60px;
+    left: 10px;*/
+    overflow: hidden;
+    
+}
+.start_button{
+    
+    align-content: center;
+    height: 50%;
+    width: 40%;
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    padding: 0 12px;
+    border:none;
+  
+}
+.view_start_button{
+    
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    align-content: center;
+    font-family: "Tajawal", sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    font-size: 40px;
+    border:none;
+    text-decoration: none;
+    width: 700 150px;
+    height: 100px;
+    margin-top: 100px;
+    font-weight: 700;
+
+    
+
+}
+
+.container_mesaj_style{
+    left: -100vh;
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    padding-top: 25px;
+    width: 400px;
+    height: 250px;
+    margin-top: 60%;
+    /* right: 50%; */
+    font-size: 70px;
+    font-weight: 550;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.container_image{
+    /*background-image: url("background_purp.png");*/
+    /* height: 600px;
+    width:1200px;
+    position: relative;
+    right: 100px;
+    left:5%;
+    top: 76px;
+    
+   
+    box-sizing: content-box;
+    align-content: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto; */
+
+      /* background-image: url(background_purp.png); */
+      height: 80%;
+      width: 1200px;
+      position: relative;
+      /* right: 100px; */
+      left: 20%;
+      top: 76px;
+      box-sizing: content-box;
+      align-content: center;
+      /* text-align: left; */
+      margin-left: auto;
+      margin-right: auto;
+    
+ 
+  
+}
+.container {
+  
+    
+ 
+    top: 20px;
+    height: 800px;
+    width: 80%;
+    position: relative;
+    align-items: center;
+    
+    right: 100px;
+}
+
+.container_text{
+
+    font-family: "Tajawal", sans-serif;
+    text-align:center;
+    position: relative;
+    background-color: transparent;
+    color: #A258B8;
+    font-weight: 600;
+    font-size: xx-large;
+    /* margin-bottom: 150px; */
+    margin: 10px 10px 10px 10px ;
+    z-index: 5;
+
+ }  
