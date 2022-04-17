@@ -1,16 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+  /*Imports the main font from Google fonts*/
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
-/*Imports the main font from Google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
-/* GENERAL PROPRIETIES */
-
-body {
+  body {
     /* Sets margin to 0 => body extends in every corner */
     margin: 0;
     /* Sets all text to font Tajawal */
     font-family: Tajawal, sans-serif;
+    height: 1000px;
+    overflow: hidden;
+    background:linear-gradient(white, whitesmoke);
 }
+.background{
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    top:100px;
+    overflow: hidden;
+   
+  }
+   
+  /*html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: #efefef;
+    overflow: hidden;
+  }
+*/
+  .panel {
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(#616ED0,white);
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    overflow: hidden;
+    align-self: center;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-left: 20%;
+
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+  
+    color: white;
+    
+    
+
+  }
+  .title {
+    color: white;
+    font-weight: 500;
+  }
+   
+  .calendar-views span {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    padding: 6px 14px;
+    border: 2px solid transparent;
+  }
+
+  .panel-body {
+    display: flex;
+    height: 340px;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 25%;
+    padding: 39px 0px 41px 26px;
+  }
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+  .category span:first-child {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.6;
+    color: white;
+    margin-bottom: 6px;
+  }
+  .category span:last-child {
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+  }
+
+  
+  .chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    position: relative;
+  }
+   
+  .operating-systems {
+    display: flex;
+    justify-content: space-between;
+    width: 215px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  span[class*="gender-"] {
+    font-size: 14px;
+    font-weight: 300;
+    font-size: 14px;
+    color: white;  
+  }
+  span[class*="gender-"] span {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 9px;
+  }
+  .gender-men span {
+    background:  #80B354;
+  }
+  .gender-women span {
+    background: #F5A623;
+  }
+  .gender-others span {
+    background:  #F9F871;
+    
+  }
+
+
+
+  div[class*="-stats"] {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    opacity: 0;
+    animation: showstats 0.6s linear 1.8s;
+    animation-fill-mode: forwards;  
+  }
+   
+  div[class*="-stats"] span {
+    height: 12px;
+    width: 12px;
+    margin: 0 7px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50%;  
+  }
+   
+
+
+  .calendar-views span:hover {
+    border: 2px solid #BDC6CF;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+
+
+
+
+   
+  @keyframes showlines {
+    to { opacity: 0.2; }
+  }
+   
+  @keyframes showstats {
+    to { opacity: 1; }
+  }
+   
+  @keyframes raise {
+    0% { transform: scaleY(0.01); }
+    75% { transform: scaleY(1.1); }
+    100% { transform: scaleY(1); }
+  }
+
+
+
+
+/* GENERAL PROPRIETIES */
+
+
 
 label {
     /* proprieties for text format for labels */
@@ -268,87 +454,7 @@ input[type=search] {
 }
 
 /* for a neat arrangement in the center of the screen, oes not take all the body */
-.background {
-   /* overflow: hidden;*/
-    margin: auto; /* some margins, auto so it splits equally */
-    width: 80%; /* takes up only 80% of the body's width */
-}
 
-/* column, there are two in the background div */
-.background__column {
-    float: left;
-    width: 50%; /* of the background block */
-    padding-top: 5%;
-}
-
-/* Clear floats after the columns */
-.background__row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* proprieties for picture upload*/
-.background__profilePic {
-    height: 40%; /* of background div */
-    width: 40%; /* of background div */
-    position: relative;
-    left: 15%; /* lets 15% of background div empty and then puts the photo */
-    border-radius: 100%; /* makes it a circle */
-    overflow: hidden;
-    border: 1px solid #A258B8;
-    display: flex;
-}
-
-/* proprieties of notification text */
-.background__textNotifications {
-    font-family: "Tajawal", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #A258B8;
-    padding-bottom: 40px;
-    padding-right: 30px;
-}
-
-/* proprieties of view (notifications) */
-.background__viewBtn {
-    color: #f2f2f2; /* text color */
-    background-color: #A258B8;
-    border-radius: 5px;
-    box-sizing: content-box;
-    align-content: center;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    padding: 0 12px;
-    text-decoration: none;
-}
-
-/* when hovered changes color */
-.background__viewBtn:hover {
-    background-color: #954FA8;
-}
-
-/* proprieties of "Want to change accounts?" */
-.background__textChgAccount {
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-    padding-top: 4px;
-    padding-right: 4px;
-}
-
-/* proprieties of "Connect to another account" */
-.background__textLnkChg {
-    color: rgba(97, 36, 133, 0.94);
-    font-family: "Tajawal", sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    padding-top: 4px;
-    padding-right: 4px;
-    text-align: center;
-}
 
 /* style the placeholder */
 ::placeholder {
@@ -357,147 +463,8 @@ input[type=search] {
     font-size: 12px;
 }
 
-/* style element with id=photo */
-#photo {
-    height: 100%;
-    width: 100%;
-}
-
-/* style element with id=uploadBtn */
-#uploadBtn {
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* put button on the image */
-    text-align: center;
-    background: rgba(162, 88, 184, 0.5);
-    color: white;
-    line-height: 30px;
-    font-family: Tajawal, sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-    display: none; /* display only when hovered */
-}
 
 
 
 
 
-
-.landing_image
-{
-  
-   margin-top: 10px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    right: 20px;
-    left: 100px;
-   /*right: 60px;
-    left: 10px;*/
-    overflow: hidden;
-    
-}
-.start_button{
-    
-    align-content: center;
-    height: 50%;
-    width: 40%;
-    color: #f2f2f2;
-    background-color: #A258B8;
-    box-sizing: content-box;
-    font-family: "Tajawal", sans-serif;
-    font-size: 15px;
-    padding: 0 12px;
-    border:none;
-  
-}
-.view_start_button{
-    
-    color: #f2f2f2;
-    background-color: #A258B8;
-    box-sizing: content-box;
-    align-content: center;
-    font-family: "Tajawal", sans-serif;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 15px;
-    font-size: 40px;
-    border:none;
-    text-decoration: none;
-    width: 700 150px;
-    height: 100px;
-    margin-top: 100px;
-    font-weight: 700;
-
-    
-
-}
-
-.container_mesaj_style{
-    
-    color: #A258B8;
-    font-family: "Tajawal", sans-serif;
-    text-align: center;
-    position: relative;
-    padding-top: 70px; 
-    background-color: white;
-    width: 400px;
-    height: 300px;
-    margin-top: 30px;
-    top: 160px;
-    /*top: 200px;*/
-    right: 200px;
-    font-size: 70px;
-    font-weight: 550;
- 
-    
-    
-    
- 
-    
-}
-
-.container_image{
-    background-image: url("background_purp.png");
-    height: 600px;
-    width:1100px;
-    position: relative;
-    right: 20px;
-   /* left: 100px;*/
-    top: 76px;
-  
-  
-    
- 
-  
-}
-.container {
-  
-    
- 
-    top: 20px;
-    height: 800px;
-    width: 1200px;
-    position: relative;
-    overflow-clip-margin: hidden;
-    
-}
-
-.container_text{
-
-    font-family: "Tajawal", sans-serif;
-    text-align:center;
-    position: relative;
-    background-color: white;
-    color: #A258B8;
-    font-weight: 600;
-    font-size: xx-large;
-    margin-bottom: 150px;
-    
-
-}
