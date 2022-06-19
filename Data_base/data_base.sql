@@ -1,6 +1,3 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-06-19 20:29:10.293
-
 -- tables
 -- Table: comments
 CREATE TABLE comments (
@@ -65,10 +62,6 @@ ALTER TABLE video_comment ADD CONSTRAINT video_comment_comments FOREIGN KEY vide
 -- Reference: video_comment_video (table: video_comment)
 ALTER TABLE video_comment ADD CONSTRAINT video_comment_video FOREIGN KEY video_comment_video (id_video)
     REFERENCES video (id_video);
-
--- Reference: video_user_video (table: video)
-ALTER TABLE video ADD CONSTRAINT video_user_video FOREIGN KEY video_user_video (id_video)
-    REFERENCES user_video (id_video);
 
 -- End of file.
 
