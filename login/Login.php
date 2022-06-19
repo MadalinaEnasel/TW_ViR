@@ -16,7 +16,7 @@
     if($data->num_rows > 0){
       $_SESSION['loggedIN'] = '1';
       $_SESSION['username'] = $username;
-      exit('<font color="green">Login success...</font>');
+      exit('<font color="red">Login success...</font>');
     }
     else
       exit('<font color="green">Login failed...</font>');
