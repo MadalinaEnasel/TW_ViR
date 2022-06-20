@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
   if(isset($_POST['signup'])){
     $connection = new mysqli('localhost','root','','users');
 
@@ -7,23 +7,19 @@
 
     $data = $connection->query("SELECT * FROM users WHERE username = '$username'");
 
-    if($data->num_rows > 0){
-      echo("This user already exists!");
+    if($data->num_rows > 0)
       exit('<font color="red">User already exists...</font>');
-    }
     else
     {
       $_SESSION['loggedIN'] = '1';
       $_SESSION['username'] = $username;
-      echo("Creating user");
+
       $password = $connection->real_escape_string($_POST['passwordPHP']);
       $email = $connection->real_escape_string($_POST['emailPHP']);
-      $first_name = $connection->real_escape_string($_POST['firstnamePHP']);
-      $last_name = $connection->real_escape_string($_POST['lastnamePHP']);
       $country = $connection->real_escape_string($_POST['countryPHP']);
       $gender = $connection->real_escape_string($_POST['genderPHP']);
 
-      $data2 = $connection->query("INSERT INTO users (`username`, `password`, `first_name`, `last_name`, `email`, `country`, `gender`) VALUES ('$username', '$password', '$first_name', '$last_name', '$email', '$country', '$gender');");
+      $data2 = $connection->query("INSERT INTO users (`username`, `password`, `email`, `country`, `gender`) VALUES ('$username', '$password', '$email', '$country', '$gender');");
       exit('<font color="green">User created...</font>');
     }
   }
@@ -78,12 +74,6 @@
           <input type="password" id ="password" placeholder="Password...">
         </div>
         <div class="txt_field">
-            <input type="text" id="first_name" placeholder="First name...">
-        </div>
-        <div class="txt_field">
-            <input type="text" id="last_name" placeholder="Last name...">
-        </div>
-        <div class="txt_field">
             <input type="text" id="country" placeholder="Country...">
         </div>
         <div class="txt_field">
@@ -98,12 +88,10 @@
             var username = $("#username").val();
             var password = $("#password").val();
             var email = $("#email").val();
-            var first_name = $("#first_name").val();
-            var last_name = $("#last_name").val();
             var country = $("#country").val();
             var gender = $("#gender").val();
 
-            if (username == "" || password == "" || email == "" || first_name == "" || last_name == "" || country == "" || gender == "")
+            if (username == "" || password == "" || email == "" || country == "" || gender == "")
               alert('Please check your inputs');
             $.ajax(
               {
@@ -114,13 +102,13 @@
                   usernamePHP: username,
                   passwordPHP: password,
                   emailPHP: email,
-                  firstnamePHP: first_name,
-                  lastnamePHP: last_name,
                   countryPHP: country,
                   genderPHP: gender
                 },
                 success: function (response){
                   $("#response").html(response);
+                  if(response.indexOf('success')>= 0)
+                    window.location ='../Home Page/home_page.php';
                 },
                 dataType: 'text'
               }

@@ -1,4 +1,19 @@
+
 <?php
+session_start();
+$connection = mysqli_connect('localhost','root','','users');
+if(isset($_GET['id'])){
+    $id_video = $_GET['id'];
+    $sql2 = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
+    $row = $sql2->fetch_assoc();
+    $ptitle = $row['title'];
+    $pdescription = $row['description'];
+}
+else
+{
+    $ptitle = "";
+    $pdescription = "";
+}
 require('../vendor/autoload.php');
 
 $clientId = "ad898bb7e7d97f4754b30472988e08bb712cf29e";
@@ -44,7 +59,6 @@ if(isset($_POST['upload-btn'])){
 
 
     //database insert
-    $connection = mysqli_connect('localhost','root','','video');
 
     $sql = "INSERT INTO video(id_video,title,description,category,tags,views,comment_count) VALUES ('$get_vid_id','$title','$desc','','',0,0)";
 
@@ -103,10 +117,10 @@ if(isset($_POST['upload-btn'])){
                 <input type='file' name='file1' accept="video/*">
             </div>
             <div class="txt_field">
-                <input input type="text" name="title" placeholder="Title...">
+                <input input type="text" name="title" value="<?php echo $ptitle;?>" placeholder="Title...">
             </div>
             <div class="txt_field">
-                <input type="text" name="description" placeholder="Description...">
+                <input type="text" name="description" value="<?php echo $pdescription;?>" placeholder="Description...">
             </div>
             <button type='submit' name='upload-btn'>Upload</button>
         </form>
