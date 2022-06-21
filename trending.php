@@ -93,8 +93,9 @@ function count_views(){
                 <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
 
                     <iframe width="100%" height="100%"
-                            data-vimeo-id=<?php $id_video?>
-                            style="border-radius: 20px;">
+                            data-vimeo-id="<?php $id_video?>"
+                            style="border-radius: 20px;"
+                            data-vimeo-autoplay="false">
                     </iframe>
                     <?php
                     count_views();
@@ -130,8 +131,9 @@ function count_views(){
                 <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
 
                     <iframe width="100%" height="100%"
-                            data-vimeo-id=<?php $id_video?>
-                            style="border-radius: 20px;">
+                            data-vimeo-id="<?php $id_video?>"
+                            style="border-radius: 20px;"
+                            data-vimeo-autoplay="false">
                     </iframe>
                     <?php
                      count_views();
@@ -164,8 +166,9 @@ function count_views(){
             <div class="column_clipuri">
                 <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
                     <iframe width="100%" height="100%"
-                            data-vimeo-id=<?php $id_video?>
-                            style="border-radius: 20px;">
+                            data-vimeo-id="<?php $id_video?>"
+                            style="border-radius: 20px;"
+                    data-vimeo-autoplay="false">
                     </iframe>
                     <?php
                     count_views();
@@ -203,8 +206,9 @@ function count_views(){
                 <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
 
                     <iframe width="100%" height="100%"
-                            data-vimeo-id=<?php $id_video?>
-                            style="border-radius: 20px;">
+                            data-vimeo-id="<?php $id_video?>"
+                            style="border-radius: 20px;"
+                            data-vimeo-autoplay="false">
                     </iframe>
                     <?php
                     count_views();
