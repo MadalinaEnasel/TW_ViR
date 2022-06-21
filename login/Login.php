@@ -1,11 +1,6 @@
 <?php
   session_start();
 
-  if (isset($_SESSION['loggedIN'])){
-    header('Location: hidden.php');
-    exit();
-  }
-
   if(isset($_POST['login'])){
     $connection = new mysqli('localhost','root','','users');
 
@@ -15,7 +10,7 @@
     $data = $connection->query("SELECT * FROM users WHERE username = '$username' AND password='$password'");
     if($data->num_rows > 0){
       $_SESSION['loggedIN'] = '1';
-      $_SESSION['username'] = $username;
+      $_SESSION['username'] = $_POST['usernamePHP'];
       exit('<font color="red">Login success...</font>');
     }
     else
@@ -93,7 +88,7 @@
                 success: function (response){
                   $("#response").html(response);
                   if(response.indexOf('success')>= 0)
-                    window.location ='hidden.php';
+                    window.location ='../Home Page/home_page.php';
                 },
                 dataType: 'text'
               }
