@@ -6,6 +6,31 @@ $sql = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
 $row = $sql->fetch_assoc();
 $title = $row['title'];
 $description = $row['description'];
+if (isset($_POST['subject'])){
+    $username = $_SESSION['username'];
+    $comment = $_POST['subject'];
+    $sql = $connection->query("SELECT MAX(CAST(id_comment AS int)) + 1 AS MAXID FROM video_comment");
+    $result = $sql->fetch_assoc();
+    $id_comment = $result['MAXID'] + 1; 
+    $sql = $connection->query("INSERT INTO comments (`id_comment`, `post_time`, `id_user`, `comment`) VALUES ($id_comment, current_timestamp(), '$username', '$comment');");
+    $sql = $connection->query("INSERT INTO video_comment (`id_comment`, `id_video`) VALUES ($id_comment, '$id_video');");
+
+    $rssDoc = new DOMDocument();
+    $rss_file = '../Notifications.xml';
+    $rssDoc->load($rss_file);
+    $items = $rssDoc->getElementsByTagName('Notifications');
+    
+    $firstItem = $items->item(0);
+    $newItem = $rssDoc->createElement('Notification');
+    $newItem2[] = $rssDoc->createElement('Action', "Commented on the video: '$id_video'");
+    $newItem2[] = $rssDoc->createElement('User', $username);
+    foreach ($newItem2 as $xmlItem){
+        $newItem->insertBefore($xmlItem,$newItem->firstChild);
+       } 
+     $firstItem->insertBefore($newItem,$firstItem->firstChild);
+    
+    $rssDoc->save('../Notifications.xml');
+}
 ?>
 <html lang="en">
 <head>
@@ -61,40 +86,23 @@ $description = $row['description'];
         <div class="accordion__notifications">
             <a class="accordion__notificationsTitle">Notifications:</a>
             <a>
+                <?php 
+                $xml = simplexml_load_file("../Notifications.xml");
+                foreach($xml as $notification)
+                {
+                ?>
                 <div class="accordion__notificationsLeft">
                     <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
                                                                                          class="navBar__userPicture"
                                                                                          alt="The src doesn't exist"></a>
                 </div>
                 <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username1 uploaded a video, you might want to take a look at
-                        that!</p>
+                    <p class="accordion__notificationsText"><?php echo $notification->User." ".$notification->Action;?></p>
                 </div>
             </a>
-
-            <a>
-                <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="navBar__userPicture"
-                                                                                         alt="The src doesn't exist"></a>
-                </div>
-                <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username2 left their opinion under one of your videos. Go
-                        check it out!</p>
-                </div>
-            </a>
-
-            <a>
-                <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="navBar__userPicture"
-                                                                                         alt="The src doesn't exist"></a>
-                </div>
-                <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Check here the new trending list! </p>
-                </div>
-            </a>
-
+            <?php
+                }
+                ?>
         </div>
 
         <a href="../upload_video/upload_video.html"><img src="upload_video.png" class="navBar__uploadIcon "
@@ -110,7 +118,7 @@ $description = $row['description'];
     <div class="background__columnLeft">
         <div class="video-content">
             <div class="vid-player">
-                <iframe src="https://player.vimeo.com/video/<?php echo $id_video;?>" width="400" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/<?php echo $id_video;?>" width="30%" height="400px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </div>
 
@@ -128,33 +136,37 @@ $description = $row['description'];
         <hr class="background__line">
 
         <p class="background__comments">Comments:</p>
-        <form action="action_page.php" method="post">
+        <form action="view_video.php?id=<?php echo $id_video;?>" method="post">
             <label for="writeComment">
                 <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
                                                                                      class="background--userPicture"
                                                                                      alt="The src doesn't exist"></a></label>
             <textarea id="writeComment" name="subject" placeholder="Write a comment.." style="height:50px"></textarea><br>
+            <button type = "submit" id="search">Post</button>
         </form>
 
-        <div class="background__videoLeft">
-            <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                               alt="The src doesn't exist"></a><br>
-            <p class="background__usernameText">U.N.</p>
-
-            <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                               alt="The src doesn't exist"></a><br>
-            <p class="background__usernameText">U.N.</p>
-        </div>
 
         <div class="background__videoRight">
-            <div class="background__comment">
-                <p class="background__commentText">The greatest video I've ever seen!!!!!! Totally recommend! Thank youuuuu! </p>
-            </div>
 
-            <div class="background__comment">
-                <p class="background__commentText">Booooooooooooo! A real waste of time!  </p>
+        <?php
+            $sql = $connection->query("SELECT * FROM video_comment WHERE id_video = '$id_video'");
+            foreach($sql as $rows)
+            {
+        ?>
+            <div>
+                <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture" alt="The src doesn't exist"></a>
             </div>
-
+            <div class="background__comment">
+                <p class="background__commentText"><?php
+                $idcomment = $rows['id_comment'];
+                $sql2 = $connection->query("SELECT * FROM comments WHERE id_comment = '$idcomment'");
+                $rows2 = $sql2->fetch_assoc();
+                echo $rows2['comment'];
+                ?></p>
+            </div>
+        <?php
+        }
+        ?>
         </div>
 
     </div>

@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title>Manage</title>
-    <link rel="stylesheet" href="manage_video.css">
+    <link rel="stylesheet" href="search_page.css">
   </head>
   <body>
     <div class="menuBar">
@@ -15,8 +15,8 @@
           <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
   
           <div role="search" class="search">
-              <form action="../search_page/search_page.php">
-                <input type="search"  id="Search_text" name="search_text" placeholder="Search...">
+              <form action="../search_page.php" method=">
+                </label><input type="search"  id="Search_text" name="search_text" placeholder="Search...">
                 <button type = "submit" id="search"><img src="search.png" class="search__icon" alt="The src doesn't exist"></button>
               </form>
           </div>
@@ -29,11 +29,10 @@
             if (search == "")
               alert('Please check your inputs');
             else
-              window.location = "../search_page/search_page.php?search=" + search;
+              window.location = "../search_page.php?search=" + search;
           });
         });
       </script>
-  
           <a><img src="menu.png" class="menu__icon" alt="The src doesn't exist"></a>
   
   
@@ -52,25 +51,25 @@
     </div>
     <div class="container">
     <?php
-            $username = $_SESSION['username'];
-            $run = $connection->query("SELECT * FROM user_video WHERE id_user = '$username'");
+            $search = $_GET['search_text'];
+            $run = $connection->query("SELECT * FROM video WHERE title LIKE '%$search%'");
             foreach($run as $rows)
             {
-            ?>
-        <div class="column">
-            <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
-            <div class = "grid-item">
-              <img src="vimeo.png" alt="The src doesn't exist">
-            </div>
-            <div class = "grid-item">
-              <label class="video-title"><?php 
+    ?>
+    <div class="column">
+      <a href="../Video%20Viewer/view_video.php?id=<?php echo $rows['id_video'];?>">
+          <div class = "grid-item">
+            <img src="vimeo.png" alt="The src doesn't exist">
+          </div>
+          <div class = "grid-item">
+            <label class="video-title"><?php 
                               $id_video = $rows['id_video'];
                               $run2 = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
                               $rows2 = $run2->fetch_assoc();
                               echo $rows2['title'];
                               ?></label>
-              <a>
-              <div class="grid-subitem">
+      <a>
+          <div class="grid-subitem">
                 <label class="tags"><?php 
                               $id_video = $rows['id_video'];
                               $run2 = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
@@ -79,21 +78,9 @@
                               ?></label>
               </div>
             </div>
-            <div class = "grid-item">
-              <a href="../statistics/statistics.php?id=<?php echo $rows['id_video'];?>">
-                <button class="edit">Statistics</button>
-              </a>
-            </div>
-          </div>
         <?php
             }
         ?>
-        <div class="column">
-          <a href="../upload_video/upload_video.php">
-            <button class="edit">Upload</button>
-          </a>
-        </div>
-
     </div>
   </body>
 </html>
