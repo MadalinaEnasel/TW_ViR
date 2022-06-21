@@ -1,4 +1,4 @@
-CREATE TABLE statistcs (
+CREATE TABLE statistics (
 id_video varchar(30) NOT NULL,
 views int NOT NULL,
 male_views int NOT NULL,

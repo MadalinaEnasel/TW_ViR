@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$connection=mysqli_connect('localhost','root','root','tw_vir');
-$id_video=$_GET['id'];
+$connection=mysqli_connect('localhost','root','','users');$id_video=$_GET['id'];
 $sql=$connection->query("Select * from statistics where id_video='$id_video'");
 $row=   $sql->fetch_assoc();
 $views= $row['views'];
