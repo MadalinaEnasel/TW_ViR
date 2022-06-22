@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
@@ -12,13 +14,29 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+
+.signup_button{
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
+  font-size: 2.2vh;
+  color: #f2f2f2;
+  text-decoration: none;
+  background-color: #A258B8;
+  padding: 2% 3% 2% 3%;
+  box-sizing: border-box;
+  border-radius: 0.8vh;
+  align-content: center;
+  border: none;
+}
 .center{
   position: absolute;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -70%);
-  width: 400px;
-  height: 750px;
+  width: 23vw;
+  height: 90vh;
   background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);

@@ -55,6 +55,23 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
+
+.login_button{
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
+  font-size: 2.2vh;
+  color: #f2f2f2;
+  text-decoration: none;
+  background-color: #A258B8;
+  padding: 2% 3% 2% 3%;
+  box-sizing: border-box;
+  border-radius: 0.8vh;
+  align-content: center;
+  border: none;
+}
+
 .txt_field span::before{
   content: '';
   position: absolute;
