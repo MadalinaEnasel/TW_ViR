@@ -70,7 +70,7 @@
                               ?></label>
       <a>
           <div class="grid-subitem">
-                <label class="tags"><?php 
+                <label class="description"><?php 
                               $id_video = $rows['id_video'];
                               $run2 = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
                               $rows2 = $run2->fetch_assoc();

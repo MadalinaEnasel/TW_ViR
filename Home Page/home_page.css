@@ -410,3 +410,7 @@ input[type=search] {
 .background__loadBtn:hover {
     box-shadow: 0.8vh 0.8vh 0.8vh rgba(57, 18, 78, 0.31);
 }
+.searchbar{
+    width:100px;
+    height:20px;
+}

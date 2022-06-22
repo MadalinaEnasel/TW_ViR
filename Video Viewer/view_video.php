@@ -1,12 +1,17 @@
 <?php
 session_start();
 include("../Home Page/developers.php");
-$connection = mysqli_connect('localhost','root','','tw_vir');
-$id_video = $_GET['id_video'];
+$connection = mysqli_connect('localhost','root','','users');
+$id_video = $_GET['id'];
 $sql = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
 $row = $sql->fetch_assoc();
 $title = $row['title'];
 $description = $row['description'];
+$sql = $sql = $connection->query("UPDATE video SET views = views + 1 WHERE id_video = '$id_video'");
+$views = $row['views']+1;
+$sql = $connection->query("SELECT * FROM user_video WHERE id_video = '$id_video'");
+$row = $sql->fetch_assoc();
+$username = $row['id_user'];
 if (isset($_POST['subject'])){
     $username = $_SESSION['username'];
     $comment = $_POST['subject'];
@@ -103,10 +108,10 @@ if (isset($_POST['subject'])){
                 ?>
         </div>
 
-        <a href="../upload_video/upload_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
+        <a href="../manage_video/manage_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
                                                            alt="The src doesn't exist"></a>
 
-        <a class="navBar__trendingBtn" href="../Trending/trending_page.html" target="_self">Trending</a>
+        <a class="navBar__trendingBtn" href="../Trending/trending.php" target="_self">Trending</a>
 
     </div>
 </div>
@@ -127,8 +132,7 @@ if (isset($_POST['subject'])){
         </span>
 
         <div class="accordion__description">
-            <p class="background__description"><?php echo $description;?></p>
-            <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
+            <p class="background__description">Uploaded by:<?php echo $username;?><br>Views:<?php echo $views;?><br><?php echo $description?></p>
         </div>
 
         <hr class="background__line">

@@ -262,3 +262,254 @@ input[type=search] {
   grid-gap:20px;
   padding-top: 20px;
 }
+.navBar {
+  background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
+  height: 10vh; /* set height */
+  position: relative; /* */
+  display: flex; /* flex mode => elements go one after another on one single line */
+  flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
+}
+
+/* column that floats to the left in the navBar*/
+.navBar__left {
+  width: 70%; /* takes 70% of the navBar's width */
+  height: 100%;
+  float: left;
+}
+
+/* proprieties for the logo icon */
+.navBar__logo {
+  float: left; /* arrange starting from left, after the last element from left */
+  height: 3.7vh; /* fixed height */
+  width: 5vh; /* fixed width*/
+  padding: 2.5vh 0 0 5vh; /* some padding*/
+}
+
+/* proprieties for the text from the logo */
+.navBar__textLogo {
+  float: left; /* arrange starting from left, after the last element from left */
+  color: white; /* color of the text */
+  font-family: "Tajawal", sans-serif; /* font */
+  font-weight: 800;
+  font-size: 5vh;
+  padding: 0.7vh 0 0 0.6vh;
+  text-decoration: none; /* text is originally a link. Used to not underline */
+}
+
+/* proprieties of the search bar */
+.navBar__search {
+  height: 90%; /* take 90% of the left's height */
+  float: left; /* arrange starting from left, after the last element from left */
+  width: 60%; /* take 60% of the left's width */
+  padding-left: 0.9vh;
+  border-radius: 1.7vh;
+  display: flex; /* flex mode => elements go one after another on one single line */
+}
+
+/* proprieties of the search icon */
+.navBar__searchIcon {
+  height: 3.3vh; /* set height */
+  width: 3.3vh; /* set width */
+  padding: 2.9vh 0.3vh 0 0; /* padding */
+  margin-left: -4.1vh; /* to overflow over the search bar*/
+}
+
+/* proprieties of the menu icon */
+.accordion__catIcon {
+  height: 4.4vh;
+  width: 3.9vh;
+  padding: 2.2vh 0.3vh 0.7vh 0.8vh;
+}
+
+.accordion__catIcon:hover {
+  background-image: linear-gradient(#A258B8, white);
+}
+
+.accordion {
+  overflow: visible;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.accordion__cat {
+  z-index: 4;
+  grid-template-columns: auto auto auto auto;
+  float: right;
+  margin-right: -6.7vh;
+  display: none;
+  row-gap: 1.7vh;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+  border-radius: 1.6vh;
+  background-color: white;
+  position: relative;
+  width: 40%;
+  height: 200%;
+  padding: 2vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.accordion__catBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.accordion__catBtn {
+  row-gap: 1.7vh;
+  column-gap: 1.7vh;
+  cursor: pointer;
+  border: 0.1vh solid rgba(171, 48, 236, 0.16);
+  border-radius: 1.7vh;
+  background-color: white;
+  position: relative;
+  padding: 0.8vh;
+  margin: 0.8vh;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* column that floats to the right in the navBar*/
+.navBar__right {
+  width: 30%; /* takes 30% of the navBar's width */
+  height: 100%;
+  float: right;
+}
+
+/* proprieties of the account icon */
+.navBar__pictureAccount {
+  float: right; /* arrange starting from right, after the last element from left */
+  position: relative;
+  height: 4.2vh; /* fixed height */
+  width: 4.2vh; /*fixed width */
+  margin-right: 12%;
+  border-radius: 100%; /* gives circle shape */
+  border: 0.2vh solid #A258B8;
+  margin-top: 1.6vh;
+}
+
+/* proprieties of the notification icon */
+.navBar__helpIcon {
+  float: right; /* arrange starting from right, after the last element from left */
+  height: 37%;
+  margin-top: 0.5vh;
+  padding: 1.7vh;
+}
+
+/* proprieties of the notification icon */
+.navBar__aboutIcon {
+  float: right; /* arrange starting from right, after the last element from left */
+  height: 37%;
+  margin-top: 1.3vh;
+  padding-top: 0.8vh;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
+  float: right; /* arrange starting from right, after the last element from left */
+  height: 40%;
+  padding: 2.1vh;;
+}
+
+.accordion__notifications {
+  display: none;
+  margin-top: 8.4vh;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+  border-radius: 1.7vh;
+  background-color: white;
+  position: absolute;
+  width: 25%;
+  z-index: 4;
+  height: 400%;
+  padding: 2vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+  background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+  cursor: pointer;
+  border: 0.16vh solid rgba(171, 48, 236, 0.16);
+  border-radius: 1.6vh;
+  background-color: white;
+  position: relative;
+  font-size: 2.4vh;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 0.5vh 2vh 0.5vh 2vh;
+  box-sizing: border-box;
+  align-content: center;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 3vh;
+  color: #A258B8;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion__notificationsLeft {
+  width: 20%; /* of the underVideo */
+  display: grid;
+  height: 50%;
+  float: left;
+}
+
+.navBar__userPicture {
+  float: left;
+  position: relative;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 2.5vh;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 0.16vh solid #A258B8;
+}
+
+.accordion__notificationsRight {
+  float: right;
+  display: grid;
+  width: 80%; /* of the underVideo */
+  height: 50%; /* of the underVideo */
+}
+
+/* proprieties of the upload icon */
+.navBar__uploadIcon {
+  float: right; /* arrange starting from right, after the last element from left */
+  height: 35%;
+  padding: 2.2vh 0 2vh 2vh;
+}
+
+/* proprieties of the trending button */
+.navBar__trendingBtn {
+  float: right;
+  vertical-align: middle;
+  text-align: center;
+  height: 45%;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
+  font-size: 2.2vh;
+  color: #f2f2f2;
+  text-decoration: none;
+  background-color: #A258B8;
+  padding: 1% 2% 1% 2%;
+  box-sizing: border-box;
+  border-radius: 0.8vh;
+  align-content: center;
+  margin: 2vh auto 3.4vh;
+}
+
+
+/* proprieties for when submit button is hovered */
+.navBar__trendingBtn:hover {
+  background-color: #954FA8; /* color of the button */
+}

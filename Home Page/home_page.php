@@ -1,6 +1,9 @@
 <?php
 session_start();
 include("developers.php");
+if (!isset($_SESSION['loggedIN'])){
+    header('Location: login.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -55,46 +58,29 @@ include("developers.php");
         <div class="accordion__notifications">
             <a class="accordion__notificationsTitle">Notifications:</a>
             <a>
-                <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png"
-                                                                       class="navBar__userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                </div>
-                <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username1 uploaded a video, you might want to take a look at
-                        that!</p>
-                </div>
-            </a>
-
-            <a>
+                <?php 
+                $xml = simplexml_load_file("../Notifications.xml");
+                foreach($xml as $notification)
+                {
+                ?>
                 <div class="accordion__notificationsLeft">
                     <a href="../Profile%20User/user_profile.html"><img src="image.png"
                                                                                          class="navBar__userPicture"
                                                                                          alt="The src doesn't exist"></a>
                 </div>
                 <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username2 left their opinion under one of your videos. Go
-                        check it out!</p>
+                    <p class="accordion__notificationsText"><?php echo $notification->User." ".$notification->Action;?></p>
                 </div>
             </a>
-
-            <a>
-                <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="navBar__userPicture"
-                                                                                         alt="The src doesn't exist"></a>
-                </div>
-                <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Check here the new trending list! </p>
-                </div>
-            </a>
-
+            <?php
+                }
+                ?>
         </div>
 
-        <a href="../upload_video/upload_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
+        <a href="../manage_video/manage_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
                                                          alt="The src doesn't exist"></a>
 
-        <a class="navBar__trendingBtn" href="../Trending/trending_page.html" target="_self">Trending</a>
+        <a class="navBar__trendingBtn" href="../Trending/trending.php" target="_self">Trending</a>
 
     </div>
 </div>
@@ -132,12 +118,11 @@ include("developers.php");
             foreach ($fetchData as $data) {
                 ?>
                 <div class="background__detailedVideo">
-                   <a href = "../Video%20Viewer/view_video.php"> <video class="background__video" controls>
+                   <a href = "../Video%20Viewer/view_video.php?id=<?php echo $data['id_video'];?>"> <video class="background__video" controls>
                     </video></a>
                     <div class="background__underVideo">
                         <div class="background__underVideoRight">
-                            <a href = "../Video%20Viewer/view_video.php"><p class="background__title"><?php echo $data['title'] ?? ''; ?></p></a>
-                            <p class="background__hashtags"><?php echo $data['tags'] ?? ''; ?></p>
+                            <a href = "../Video%20Viewer/view_video.php?id=<?php echo $data['id_video'];?>"><p class="background__title"><?php echo $data['title'] ?? ''; ?></p></a>
                         </div>
                     </div>
                 </div>

@@ -34,18 +34,12 @@
         });
       </script>
   
-          <a><img src="menu.png" class="menu__icon" alt="The src doesn't exist"></a>
-  
-  
       </div>
   
       <div class="right">
   
           <a href="../Profile%20User/user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
   
-<!--          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"-->
-<!--                                            alt="The src doesn't exist"></a>-->
-<!--  -->
           <a class="trendingButton" href="../Trending/trending_page.html" target="_self">Trending</a>
   
       </div>
