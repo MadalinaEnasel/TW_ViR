@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../Home Page/developers.php");
 $connection = mysqli_connect('localhost','root','','tw_vir');
 $id_video = $_GET['id_video'];
 $sql = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
@@ -170,36 +171,30 @@ if (isset($_POST['subject'])){
         </div>
 
     </div>
-
+    <?php echo $deleteMsg ?? ''; ?>
     <div class="background__columnRight">
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-
-        <video class="background__video" controls>
-        </video>
-        <p class="background__videoTitleRight">Some Title and other stuff like that</p>
-    </div>
+        <?php
+        if (is_array($fetchData)) {
+            foreach ($fetchData as $data) {
+                ?>
+                <div class="background__detailedVideo">
+                    <video class="background__video" controls>
+                    </video>
+                    <div class="background__underVideo">
+                        <div>
+                            <p class="background__videoTitleRight"><?php echo $data['title'] ?? ''; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        } else { ?>
+            <div colspan="8">
+                <?php echo $fetchData; ?>
+            </div>
+            <?php
+        } ?>
+        </div>
 
 </main>
 <script>

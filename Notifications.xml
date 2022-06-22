@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Notifications><Notification><User>Razvan</User><Action>Commented on the video: '722281879'</Action></Notification><Notification><User>Catalina</User><Action>Commented on the video: '722597163'</Action></Notification><Notification><User>Catalina</User><Action>Commented on the video: '722597163'</Action></Notification>
+<Notifications><Notification><User/><Action>Commented on the video: ''</Action></Notification><Notification><User/><Action>Commented on the video: ''</Action></Notification><Notification><User/><Action>Commented on the video: ''</Action></Notification><Notification><User/><Action>Commented on the video: ''</Action></Notification><Notification><User>Razvan</User><Action>Commented on the video: '722281879'</Action></Notification><Notification><User>Catalina</User><Action>Commented on the video: '722597163'</Action></Notification><Notification><User>Catalina</User><Action>Commented on the video: '722597163'</Action></Notification>
 	<Notification>
 		<User>Razvan</User>
 		<Action>Created website!</Action>
