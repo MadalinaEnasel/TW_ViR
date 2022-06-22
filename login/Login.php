@@ -27,12 +27,12 @@
   <body>
     <div class="menuBar">
       <div class="left">
-          <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
-          <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+          <a href="../Home%20Page/home_page.php"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+          <a class="text--logo" href="../Home%20Page/home_page.php" target="_self">DailyViR</a>
   
           <div role="search" class="search">
               <label for="search"> </label><input type="search"  id="search" name="search" placeholder="Search...">
-              <a href="../Home%20Page/home_page.html"><img src="search.png" class="search__icon" alt="The src doesn't exist"></a>
+              <a href="../Home%20Page/home_page.php"><img src="search.png" class="search__icon" alt="The src doesn't exist"></a>
           </div>
   
           <a><img src="menu.png" class="menu__icon" alt="The src doesn't exist"></a>
@@ -42,21 +42,21 @@
   
       <div class="right">
   
-          <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
+          <a href="../Profile%20User/user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
   
-          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"
-                                            alt="The src doesn't exist"></a>
+<!--          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"-->
+<!--                                            alt="The src doesn't exist"></a>-->
   
-          <a href="../Upload%20Video/upload_video.html"><img src="upload_video.png" class="upload__icon"
+          <a href="../upload_video/upload_video.php"><img src="upload_video.png" class="upload__icon"
                                                              alt="The src doesn't exist"></a>
   
-          <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
+          <a class="trendingButton" href="../Trending/trending_page.html" target="_self">Trending</a>
   
       </div>
   </div>
     <div class="center">
       <h1>Login</h1>
-      <form method="post" action="login.php">
+      <form method="post" action="Login.php">
         <div class="txt_field">
           <input type="text" id="username" placeholder="Username...">
         </div>
@@ -65,7 +65,7 @@
         </div>
         <input type="button" value="Login" id="login">
         <div class="signup_link">
-          Not a member? <a href="../signup/Sign_up.html">Signup</a>
+          Not a member? <a href="../signup/Sign_up.php">Signup</a>
         </div>
       </form>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -11,11 +11,11 @@
   <body>
     <div class="menuBar">
       <div class="left">
-          <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
-          <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+          <a href="../Home%20Page/home_page.php"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+          <a class="text--logo" href="../Home%20Page/home_page.php" target="_self">DailyViR</a>
   
           <div role="search" class="search">
-              <form action="../search_page.php" method=">
+              <form action="search_page.php" method=">
                 </label><input type="search"  id="Search_text" name="search_text" placeholder="Search...">
                 <button type = "submit" id="search"><img src="search.png" class="search__icon" alt="The src doesn't exist"></button>
               </form>

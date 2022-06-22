@@ -1,5 +1,6 @@
   /*Imports the main font from Google fonts*/
   @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
 
   body {
@@ -41,7 +42,7 @@
     width:800px;
     height: 100%;
     background: linear-gradient(#616ED0,white);
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.10);
     border-radius: 6px;
     overflow: hidden;
     align-self: center;
@@ -86,7 +87,7 @@
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 25%;
-    padding: 39px 0px 41px 26px;
+    padding: 39px 0 41px 26px;
   }
   .category {
     display: flex;
@@ -125,8 +126,7 @@
   span[class*="gender-"] {
     font-size: 14px;
     font-weight: 300;
-    font-size: 14px;
-    color: white;  
+      color: white;
   }
   span[class*="gender-"] span {
     width: 9px;
@@ -200,12 +200,7 @@
 /* GENERAL PROPRIETIES */
 
 
-
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
-
-
-
-label {
+  label {
     /* proprieties for text format for labels */
     font-family: "Tajawal", sans-serif;
     font-weight: 700;
@@ -471,15 +466,12 @@ input[type=search] {
     font-size: 2.2vh;
     color: #f2f2f2;
     text-decoration: none;
-    margin-top: 2vh;
-    margin-bottom: 3.4vh;
     background-color: #A258B8;
     padding: 1% 2% 1% 2%;
     box-sizing: border-box;
     border-radius: 0.8vh;
     align-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2vh auto 3.4vh;
 }
 
 

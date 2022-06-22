@@ -84,12 +84,12 @@ if(isset($_POST['upload-btn'])){
 <body>
 <div class="menuBar">
     <div class="left">
-        <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
-        <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+        <a href="../Home%20Page/home_page.php"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+        <a class="text--logo" href="../Home%20Page/home_page.php" target="_self">DailyViR</a>
 
         <div role="search" class="search">
             <label for="search"> </label><input type="search" id="search" name="search" placeholder="Search...">
-            <a href="../Home%20Page/home_page.html"><img src="search.png" class="search__icon"
+            <a href="../Home%20Page/home_page.php"><img src="search.png" class="search__icon"
                                                          alt="The src doesn't exist"></a>
         </div>
 
@@ -106,7 +106,7 @@ if(isset($_POST['upload-btn'])){
         <a href="notifications.html"><img src="notifications.png" class="notifications__icon"
                                           alt="The src doesn't exist"></a>
 
-        <a class="trendingButton" href="../Trending/trending_page.html.html" target="_self">Trending</a>
+        <a class="trendingButton" href="../Trending/trending_page.html" target="_self">Trending</a>
 
     </div>
 </div>

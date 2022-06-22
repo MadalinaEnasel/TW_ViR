@@ -28,21 +28,18 @@
 
 
 .container_clipuri{
-    margin-top: 5%;
     height: 80%;
     width: 70%;
     display: block;
-    margin-left: 10px;
-    margin-bottom: 10 px;
-    margin-right: 10px;
- 
+    margin: 5% 10px 10px;
+
 }
 
 .column_clipuri{
     float: left;
     height: 80%;
     width: 40%;
-    padding-top: 0%;
+    padding-top: 0;
     background-color: white;
     display: flex;
     -ms-flex-item-align: center;
@@ -463,15 +460,12 @@ input[type=search] {
     font-size: 2.2vh;
     color: #f2f2f2;
     text-decoration: none;
-    margin-top: 2vh;
-    margin-bottom: 3.4vh;
     background-color: #A258B8;
     padding: 1% 2% 1% 2%;
     box-sizing: border-box;
     border-radius: 0.8vh;
     align-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2vh auto 3.4vh;
 }
 
 

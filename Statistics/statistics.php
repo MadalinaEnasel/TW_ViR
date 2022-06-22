@@ -27,12 +27,12 @@ $other_views=$row['others_views']+$row['binary_views']
 <body>
 <div class="navBar">
     <div class="navBar__left">
-        <a href="../Home%20Page/home_page.html"><img class="navBar__logo" src="camera.png" alt="The src doesn't exist"></a>
-        <a class="navBar__textLogo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+        <a href="../Home%20Page/home_page.php"><img class="navBar__logo" src="camera.png" alt="The src doesn't exist"></a>
+        <a class="navBar__textLogo" href="../Home%20Page/home_page.php" target="_self">DailyViR</a>
 
         <div role="search" class="navBar__search">
             <label for="search"> </label><input type="search" id="search" name="search" placeholder="Search...">
-            <a href="../Home%20Page/home_page.html"><img src="search.svg" class="navBar__searchIcon"
+            <a href="../Home%20Page/home_page.php"><img src="search.svg" class="navBar__searchIcon"
                                                          alt="The src doesn't exist"></a>
         </div>
 
@@ -55,12 +55,9 @@ $other_views=$row['others_views']+$row['binary_views']
 
     <div class="navBar__right">
 
-        <a href="user_profile.html"><img src="image.png" class="navBar__pictureAccount"
+        <a href="../Profile%20User/user_profile.html"><img src="image.png" class="navBar__pictureAccount"
                                          alt="The src doesn't exist"></a>
-
-        <a href="../Help/help.html"><img src="help.png" class="navBar__helpIcon"
-                                         alt="The src doesn't exist"></a><!--Doesn't exist yet-->
-
+        
         <a href="../About/about.html"><img src="about.svg" class="navBar__aboutIcon"
                                            alt="The src doesn't exist"></a><!--Doesn't exist yet-->
 
@@ -72,7 +69,7 @@ $other_views=$row['others_views']+$row['binary_views']
             <a class="accordion__notificationsTitle">Notifications:</a>
             <a>
                 <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
+                    <a href="../Profile%20User/user_profile.html"><img src="image.png"
                                                                                          class="navBar__userPicture"
                                                                                          alt="The src doesn't exist"></a>
                 </div>
@@ -83,7 +80,7 @@ $other_views=$row['others_views']+$row['binary_views']
 
             <a>
                 <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
+                    <a href="../Profile%20User/user_profile.html"><img src="image.png"
                                                                                          class="navBar__userPicture"
                                                                                          alt="The src doesn't exist"></a>
                 </div>
@@ -94,7 +91,7 @@ $other_views=$row['others_views']+$row['binary_views']
 
             <a>
                 <div class="accordion__notificationsLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
+                    <a href="../Profile%20User/user_profile.html"><img src="image.png"
                                                                                          class="navBar__userPicture"
                                                                                          alt="The src doesn't exist"></a>
                 </div>
@@ -105,10 +102,10 @@ $other_views=$row['others_views']+$row['binary_views']
 
         </div>
 
-        <a href="../upload_video/upload_video.html"><img src="upload_video.png" class="navBar__uploadIcon "
+        <a href="../upload_video/upload_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
                                                          alt="The src doesn't exist"></a>
 
-        <a class="navBar__trendingBtn" href="../Trending/trending.html" target="_self">Trending</a>
+        <a class="navBar__trendingBtn" href="../Trending/trending_page.html" target="_self">Trending</a>
 
     </div>
 </div>

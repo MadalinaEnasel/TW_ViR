@@ -11,8 +11,8 @@
   <body>
     <div class="menuBar">
       <div class="left">
-          <a href="../Home%20Page/home_page.html"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
-          <a class="text--logo" href="../Home%20Page/home_page.html" target="_self">DailyViR</a>
+          <a href="../Home%20Page/home_page.php"><img class="logo" src="camera.png" alt="The src doesn't exist"></a>
+          <a class="text--logo" href="../Home%20Page/home_page.php" target="_self">DailyViR</a>
   
           <div role="search" class="search">
               <form action="../search_page/search_page.php">
@@ -41,12 +41,12 @@
   
       <div class="right">
   
-          <a href="user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
+          <a href="../Profile%20User/user_profile.html"><img src="image.png" class="profile-account" alt="The src doesn't exist"></a>
   
-          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"
-                                            alt="The src doesn't exist"></a>
-  
-          <a class="trendingButton" href="../Trending/trending.html" target="_self">Trending</a>
+<!--          <a href="notifications.html"><img src="notifications.png" class="notifications__icon"-->
+<!--                                            alt="The src doesn't exist"></a>-->
+<!--  -->
+          <a class="trendingButton" href="../Trending/trending_page.html" target="_self">Trending</a>
   
       </div>
     </div>
@@ -80,7 +80,7 @@
               </div>
             </div>
             <div class = "grid-item">
-              <a href="../statistics/statistics.php?id=<?php echo $rows['id_video'];?>">
+              <a href="../Statistics/statistics.php?id=<?php echo $rows['id_video'];?>">
                 <button class="edit">Statistics</button>
               </a>
             </div>
