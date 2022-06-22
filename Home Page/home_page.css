@@ -5,6 +5,7 @@ body {
     margin: 0;
     /* Sets all text to font Tajawal */
     font-family: Tajawal, sans-serif;
+    height: 100%;
 }
 
 label {
@@ -296,6 +297,7 @@ input[type=search] {
     grid-template-columns: auto auto auto auto;
     overflow: hidden;
     width: 80%; /* takes up only 80% of the body's width */
+    height: 100%;
     align-content: center;
     margin: auto;
 }
@@ -339,9 +341,8 @@ input[type=search] {
 
 /* equivalent with right to navBar*/
 .background__underVideoRight {
-    float: right;
     display: grid;
-    width: 85%; /* of the underVideo */
+    width: 95%; /* of the underVideo */
     height: 100%; /* of the underVideo */
 }
 

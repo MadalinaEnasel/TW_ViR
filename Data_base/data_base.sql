@@ -1,7 +1,7 @@
 -- tables
 -- Table: comments
 CREATE TABLE comments (
-    id_comment varchar(30) NOT NULL,
+    id_comment INT NOT NULL AUTO_INCREMENT,
     post_time timestamp NOT NULL,
     id_user varchar(30) NOT NULL,
     comment text NOT NULL,
@@ -10,14 +10,14 @@ CREATE TABLE comments (
 
 -- Table: user_video
 CREATE TABLE user_video (
-    id_user varchar(30) NOT NULL,
-    id_video varchar(30) NOT NULL,
+    id_user INT NOT NULL,
+    id_video INT NOT NULL,
     CONSTRAINT user_video_pk PRIMARY KEY (id_user,id_video)
 );
 
 -- Table: users
 CREATE TABLE users (
-    username varchar(30) NOT NULL,
+    username varchar(30) NOT NULL ,
     gender varchar(20) NOT NULL,
     email varchar(60) NOT NULL,
     password varchar(20) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE users (
 
 -- Table: video
 CREATE TABLE video (
-    id_video varchar(30) NOT NULL,
+    id_video INT NOT NULL AUTO_INCREMENT,
     comment_count int NOT NULL,
     views int NOT NULL,
     category varchar(30) NOT NULL,
@@ -41,8 +41,8 @@ CREATE TABLE video (
 
 -- Table: video_comment
 CREATE TABLE video_comment (
-    id_video varchar(30) NOT NULL,
-    id_comment varchar(30) NOT NULL,
+    id_video INT NOT NULL,
+    id_comment INT NOT NULL,
     CONSTRAINT video_comment_pk PRIMARY KEY (id_video,id_comment)
 );
 

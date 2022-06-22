@@ -1,7 +1,7 @@
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','users');
-$id_video = $_GET['id'];
+$connection = mysqli_connect('localhost','root','','tw_vir');
+$id_video = $_GET['id_video'];
 $sql = $connection->query("SELECT * FROM video WHERE id_video = '$id_video'");
 $row = $sql->fetch_assoc();
 $title = $row['title'];

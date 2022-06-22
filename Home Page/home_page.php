@@ -1,5 +1,7 @@
 <?php
 session_start();
+include("developers.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,12 +37,13 @@ session_start();
             <a class="accordion__catBtn">DIYs</a>
             <a class="accordion__catBtn">Cooking</a>
         </div>
+
     </div>
 
     <div class="navBar__right">
 
         <a href="../Profile%20User/user_profile.html"><img src="image.png" class="navBar__pictureAccount"
-                                         alt="The src doesn't exist"></a>
+                                                           alt="The src doesn't exist"></a>
 
         <a href="../Help/help.html"><img src="help.png" class="navBar__helpIcon"
                                          alt="The src doesn't exist"></a><!--Doesn't exist yet-->
@@ -57,11 +60,12 @@ session_start();
             <a>
                 <div class="accordion__notificationsLeft">
                     <a href="../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="navBar__userPicture"
-                                                                                         alt="The src doesn't exist"></a>
+                                                                       class="navBar__userPicture"
+                                                                       alt="The src doesn't exist"></a>
                 </div>
                 <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username1 uploaded a video, you might want to take a look at that!</p>
+                    <p class="accordion__notificationsText">Username1 uploaded a video, you might want to take a look at
+                        that!</p>
                 </div>
             </a>
 
@@ -72,7 +76,8 @@ session_start();
                                                                                          alt="The src doesn't exist"></a>
                 </div>
                 <div class="accordion__notificationsRight">
-                    <p class="accordion__notificationsText">Username2 left their opinion under one of your videos. Go check it out!</p>
+                    <p class="accordion__notificationsText">Username2 left their opinion under one of your videos. Go
+                        check it out!</p>
                 </div>
             </a>
 
@@ -89,8 +94,8 @@ session_start();
 
         </div>
 
-        <a href="../manage_video/manage_video.php"><img src="upload_video.png" class="navBar__uploadIcon "
-                                                           alt="The src doesn't exist"></a>
+        <a href="../upload_video/upload_video.html"><img src="upload_video.png" class="navBar__uploadIcon "
+                                                         alt="The src doesn't exist"></a>
 
         <a class="navBar__trendingBtn" href="../Trending/trending_page.html" target="_self">Trending</a>
 
@@ -123,217 +128,32 @@ session_start();
 </script>
 
 <main class="background">
+    <?php echo $deleteMsg ?? ''; ?>
     <div class="background__row">
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="background--userPicture"
-                                                                                         alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
+        <?php
+        if (is_array($fetchData)) {
+            foreach ($fetchData as $data) {
+                ?>
+                <div class="background__detailedVideo">
+                    <video class="background__video" controls>
+                    </video>
+                    <div class="background__underVideo">
+                        <div class="background__underVideoRight">
+                            <p class="background__title"><?php echo $data['title'] ?? ''; ?></p>
+                            <p class="background__hashtags"><?php echo $data['tags'] ?? ''; ?></p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
+                <?php
+            }
+        } else { ?>
+            <div colspan="8">
+                <?php echo $fetchData; ?>
             </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/../Profile%20User/user_profile.html"><img src="image.png"
-                                                                                         class="background--userPicture"
-                                                                                         alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="background__detailedVideo">
-            <video class="background__video" controls>
-            </video>
-            <div class="background__underVideo">
-                <div class="background__underVideoLeft">
-                    <a href="../Profile%20User/user_profile.html"><img src="image.png" class="background--userPicture"
-                                                                       alt="The src doesn't exist"></a>
-                    <p class="background__usernameText">U.N.</p>
-                </div>
-
-                <div class="background__underVideoRight">
-                    <p class="background__title">Some Title and other stuff like that</p>
-                    <p class="background__hashtags">#hashtag1 #hashtag2 #hashtag3 #hashtag4</p>
-                </div>
-            </div>
-        </div>
+            <?php
+        } ?>
     </div>
 </main>
-<div class="background__row">
-    <a href="home_page.html" class="background__loadBtn"> LOAD MORE...</a>
-</div>
 </body>
 
 </html>
