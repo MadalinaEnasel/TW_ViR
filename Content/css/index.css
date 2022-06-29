@@ -1,0 +1,1126 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+
+.main{
+    background-image: linear-gradient(#a258b8, white);
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: "Tajawal", sans-serif;
+    height: 100%;
+}
+
+label {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A258B8;
+}
+
+.aboutPage{
+    background-image: linear-gradient(white, #a258b8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+
+.documents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vw;
+    margin-top: 1vh;
+}
+
+input[type=search] {
+    font-family: "Tajawal", sans-serif; /* font */
+    font-size: 2vh; /* size */
+    width: 20vw; /* Full width */
+    outline-color: #A258B8; /* when clicked and while in the search bar, there will be a #A258B8 border */
+    padding: 1.7vh; /* Some padding between text and box, same in all four directions: top, bottom, left, right */
+    border: 0.16vh solid #A258B8; /* #A258B8 border */
+    border-radius: 0.8vh; /* Rounded border, used px and not % to round the corners and not the edges */
+    box-sizing: border-box; /* How long are the boxes*/
+    margin-top: 2vh; /* Add a top margin */
+    margin-bottom: 2vh; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.navBar {
+    background-image: linear-gradient(#A258B8, white); /* make the header's background a gradient */
+    height: 10vh; /* set height */
+    position: relative; /* */
+    display: flex; /* flex mode => elements go one after another on one single line */
+    flex-wrap: wrap; /* elements break into multiple lines, depending on the space there is */
+}
+
+.navBar__left {
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+.navBar__logo {
+    float: left; /* arrange starting from left, after the last element from left */
+    height: 3.5vh; /* fixed height */
+    width: 5%; /* fixed width*/
+    padding: 2.5vh 0 0 5vh; /* some padding*/
+}
+
+.navBar__textLogo {
+    float: left; /* arrange starting from left, after the last element from left */
+    color: white; /* color of the text */
+    font-family: "Tajawal", sans-serif; /* font */
+    font-weight: 800;
+    font-size: 2.5vw;
+    padding: 0.7vh 0 0 0.6vh;
+    text-decoration: none; /* text is originally a link. Used to not underline */
+    width: 20%;
+    height: 90%;
+}
+
+.navBar__search {
+    height: 90%; /* take 90% of the left's height */
+    float: left; /* arrange starting from left, after the last element from left */
+    width: 35%; /* take 60% of the left's width */
+    padding-left: 0.9vh;
+    border-radius: 1.7vh;
+    display: flex; /* flex mode => elements go one after another on one single line */
+}
+
+/* proprieties of the search icon */
+.navBar__searchIcon {
+    height: 3.3vh; /* set height */
+    width: 10%; /* set width */
+    padding: 2.9vh 0.3vh 0 0; /* padding */
+    margin-left: -4.1vh; /* to overflow over the search bar*/
+    margin-right: 2vw;
+}
+
+/* proprieties of the menu icon */
+.accordion__catIcon {
+    height: 4.4vh;
+    width: 3.9vh;
+    padding: 2.2vh 0.3vh 0.7vh 0.8vh;
+    margin-left: 1vw;
+}
+
+.accordion__catIcon:hover {
+    background-image: linear-gradient(#A258B8, white);
+}
+
+.accordion {
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.accordion__cat {
+    z-index: 4;
+    grid-template-columns: auto auto auto auto;
+    float: right;
+    margin-right: -6.7vh;
+    display: none;
+    row-gap: 1.7vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.6vh;
+    background-color: white;
+    position: relative;
+    width: 40%;
+    height: 200%;
+    padding: 2vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__catBtn:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__catBtn {
+    row-gap: 1.7vh;
+    column-gap: 1.7vh;
+    cursor: pointer;
+    border: 0.1vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.7vh;
+    background-color: white;
+    position: relative;
+    padding: 0.8vh;
+    margin: 0.8vh;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* column that floats to the right in the navBar*/
+.navBar__right {
+    width: 55%; /* takes 30% of the navBar's width */
+    height: 100%;
+    float: right;
+}
+
+/* proprieties of the account icon */
+.navBar__pictureAccount {
+    float: right; /* arrange starting from right, after the last element from left */
+    position: relative;
+    height: 4.2vh; /* fixed height */
+    width: 4.2vh; /*fixed width */
+    margin-right: 12%;
+    border-radius: 100%; /* gives circle shape */
+    border: 0.2vh solid #A258B8;
+    margin-top: 1.6vh;
+}
+
+/* proprieties of the notification icon */
+.navBar__helpIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 37%;
+    margin-top: 0.5vh;
+    padding: 1.7vh;
+}
+
+/* proprieties of the notification icon */
+.navBar__aboutIcon {
+    float: right;
+    height: 37%;
+    margin-top: 1.3vh;
+    margin-right: 1.2vh;
+    margin-left: 2.2vh;
+    padding-top: 0.8vh;
+}
+
+/* proprieties of the notification icon */
+.accordion__notificationsIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 40%;
+    padding: 2.1vh;;
+}
+
+.accordion__notifications {
+    display: none;
+    margin-top: 8.4vh;
+    margin-left: 5.4vh;
+    box-shadow: 0.8vh 0.8vh 0.8vh rgb(57 18 78 / 31%);
+    border-radius: 1.7vh;
+    background-color: white;
+    position: absolute;
+    width: 25%;
+    z-index: 4;
+    height: 400%;
+    padding: 2vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.accordion__notificationsText:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion__notificationsText {
+    cursor: pointer;
+    border: 0.16vh solid rgba(171, 48, 236, 0.16);
+    border-radius: 1.6vh;
+    background-color: white;
+    position: relative;
+    font-size: 2.4vh;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0.5vh 2vh 0.5vh 2vh;
+    box-sizing: border-box;
+    align-content: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* proprieties of notification text */
+.accordion__notificationsTitle {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 3vh;
+    color: #A258B8;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion__notificationsLeft {
+    width: 80%; /* of the underVideo */
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    float: left;
+}
+
+.navBar__userPicture {
+    float: left;
+    position: relative;
+    height: 5vh;
+    width: 5vh;
+    font-size: 2vw;
+    margin-top: 2.5vh;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 0.16vh solid #A258B8;
+}
+
+.accordion__notificationsRight {
+    float: right;
+    display: grid;
+    width: 80%; /* of the underVideo */
+    height: 50%; /* of the underVideo */
+}
+
+/* proprieties of the upload icon */
+.navBar__uploadIcon {
+    float: right; /* arrange starting from right, after the last element from left */
+    height: 35%;
+    padding: 2.2vh 0 2vh 2vh;
+}
+
+/* proprieties of the trending button */
+.navBar__trendingBtn {
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+    height: 55%;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 2.2vh;
+    color: #f2f2f2;
+    text-decoration: none;
+    background-color: #A258B8;
+    padding: 1% 2% 2% 2%;
+    box-sizing: border-box;
+    border-radius: 0.8vh;
+    align-content: center;
+    margin: 2vh auto 3.4vh;
+}
+
+
+/* proprieties for when submit button is hovered */
+.navBar__trendingBtn:hover {
+    background-color: #954FA8; /* color of the button */
+}
+
+/* for a neat arrangement in the center of the screen, oes not take all the body */
+.background {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow: hidden;
+    width: 80%; /* takes up only 80% of the body's width */
+    height: 100%;
+    align-content: center;
+    margin: auto;
+}
+
+.background__detailedVideo {
+    float: left;
+    width: 250px;
+    height: 200px;
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.background__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* proprieties for videos */
+.background__video {
+    width: 90%; /* of the column */
+    height: 133px;
+    overflow: hidden;
+}
+
+/* equivalent to row to background */
+.background__underVideo {
+    overflow: hidden;
+    width: 90%; /* of the video */
+    position: relative;
+    display: flex;
+}
+
+/* equivalent with left to navBar */
+.background__underVideoLeft {
+    width: 15%; /* of the underVideo */
+    display: grid;
+    height: 100%; /* of the underVideo */
+    float: left;
+}
+
+/* equivalent with right to navBar*/
+.background__underVideoRight {
+    display: grid;
+    width: 95%; /* of the underVideo */
+    height: 100%; /* of the underVideo */
+}
+
+/* proprieties of userPicture, under the video */
+.background--userPicture {
+    float: left;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 1px solid #A258B8;
+}
+
+/* proprieties of username text, under the video */
+.background__usernameText {
+    float: left;
+    color: #999999;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    padding-right: 4px;
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* proprieties of title, under the video */
+.background__title {
+    float: left;
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* proprieties of hashtags, under the video */
+.background__hashtags {
+    float: left;
+    color: #3F729B;
+    font-family: "Tajawal", sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding-right: 4px;
+}
+
+/* proprieties of "Load More.." */
+.background__loadBtn {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.6vh;
+    text-decoration: none;
+    padding-block-start: 2vh;
+    margin-bottom: 8.4vh;
+    border-radius: 0.8vh;
+    box-sizing: content-box;
+    border: none;
+    font-family: "Tajawal", sans-serif;
+    font-size: 3vh;
+    color: #A258B8;
+    background-color: transparent;
+}
+
+/* when hovered adds shadow */
+.background__loadBtn:hover {
+    box-shadow: 0.8vh 0.8vh 0.8vh rgba(57, 18, 78, 0.31);
+}
+.searchbar{
+    width:100px;
+    height:20px;
+}
+
+.pageContainer{
+    height: 90vh;
+    background-image: linear-gradient(white,#a258b8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    margin-top: 20vh;
+    width: 40vw;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  }
+  
+  #sign{
+    margin-top: 10vh;
+  }
+  #uploadForm{
+    margin-top: 10vh;
+    height: auto;
+  }
+  .center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin:  0;
+    margin-bottom: 2vh;
+  }
+  .txt_field input{
+    width: 30vw;
+    height: 5vh;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+
+  }
+  .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+  }
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+  }
+  .txt_field input:focus ~ span::before,
+  .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+  .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+  .pass:hover{
+    text-decoration: underline;
+  }
+
+  input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #a258b8;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    border-color: #a258b8;
+    transition: .5s;
+  }
+  .signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  .signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+  }
+  .signup_link a:hover{
+    text-decoration: underline;
+  }
+  .logo {
+    float: left;
+    height: 22px;
+    width: 30px;
+    padding: 15px 2px 0 30px;
+  }
+  .text--logo {
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+    float: left;
+    padding-top: 4px;
+    padding-right: 4px;
+    text-align: initial;
+    text-decoration: none;
+  
+  }
+  .background__column {
+    float: left;
+    width: 50%; /* of the background block */
+    padding-top: 5%;
+}
+
+/* Clear floats after the columns */
+.background__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.navBar__resetPasswdBtn {
+    float: right;
+    vertical-align: middle; /* vertical alignment */
+    text-align: center; /* horizontal alignment */
+    height: 45%; /* takes 45% of the left's height */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 2.5vh;
+    color: #f2f2f2; /* color of the text */
+    text-decoration: none; /* text is originally a link. Used to not underline */
+    margin-top: 4.1vh;
+    background-color: #A258B8;
+    padding: 0 2% 0 2%;
+    box-sizing: content-box;
+    border-radius: 0.8vh;
+}
+
+/* proprieties for picture upload*/
+.background__profilePic {
+    height: 40%; /* of background div */
+    width: 40%; /* of background div */
+    position: relative;
+    left: 15%; /* lets 15% of background div empty and then puts the photo */
+    border-radius: 100%; /* makes it a circle */
+    overflow: hidden;
+    border: 0.16vh solid #A258B8;
+    display: flex;
+}
+
+/* proprieties of "Want to change accounts?" */
+.background__textChgAccount {
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 4.1vh;
+    padding-top: 0.7vh;
+    padding-right: 0.7vh;
+}
+
+/* proprieties of "Connect to another account" */
+.background__textLnkChg {
+    color: rgba(97, 36, 133, 0.94);
+    font-family: "Tajawal", sans-serif;
+    font-weight: 800;
+    font-size: 3.4vh;
+    padding-top: 0.7vh;
+    padding-right: 0.7vh;
+    text-align: center;
+}
+
+/* style the placeholder */
+::placeholder {
+    font-family: "Tajawal", sans-serif;
+    color: grey;
+    font-size: 2vh;
+}
+
+/* style element with id=photo */
+#photo {
+    height: 100%;
+    width: 100%;
+}
+
+/* style element with id=uploadBtn */
+#uploadBtn {
+    height: 6.7vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* put button on the image */
+    text-align: center;
+    background: rgba(162, 88, 184, 0.5);
+    color: white;
+    line-height: 5vh;
+    font-family: Tajawal, sans-serif;
+    font-size: 2.5vh;
+    cursor: pointer;
+    display: none; /* display only when hovered */
+}
+
+.landing_image
+{
+  
+   margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    right: 20px;
+    left: 100px;
+   /*right: 60px;
+    left: 10px;*/
+    overflow: hidden;
+    
+}
+.start_button{
+    
+    align-content: center;
+    height: 50%;
+    width: 40%;
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    padding: 0 12px;
+    border:none;
+  
+}
+.view_start_button{
+    color: #f2f2f2;
+    background-color: #A258B8;
+    box-sizing: content-box;
+    align-content: center;
+    font-family: "Tajawal", sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    font-size: 40px;
+    border:none;
+    text-decoration: none;
+    width: 700px;
+    height: 100px;
+    margin-top: 100px;
+    font-weight: 700;
+
+    
+
+}
+
+.container_mesaj_style{
+    left: -100vh;
+    color: #A258B8;
+    font-family: "Tajawal", sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    padding-top: 25px;
+    width: 400px;
+    height: 250px;
+    margin-top: 60%;
+    /* right: 50%; */
+    font-size: 70px;
+    font-weight: 550;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.container_image{
+    /*background-image: url("background_purp.png");*/
+    /* height: 600px;
+    width:1200px;
+    position: relative;
+    right: 100px;
+    left:5%;
+    top: 76px;
+    
+   
+    box-sizing: content-box;
+    align-content: center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto; */
+
+      /* background-image: url(background_purp.png); */
+      height: 80%;
+      width: 1200px;
+      position: relative;
+      /* right: 100px; */
+      left: 20%;
+      top: 76px;
+      box-sizing: content-box;
+      align-content: center;
+      /* text-align: left; */
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.container {
+  
+    
+ 
+    top: 20px;
+    height: 800px;
+    width: 80%;
+    position: relative;
+    align-items: center;
+    
+    right: 100px;
+}
+
+.container_text{
+
+    font-family: "Tajawal", sans-serif;
+    text-align:center;
+    position: relative;
+    background-color: transparent;
+    color: #A258B8;
+    font-weight: 600;
+    font-size: xx-large;
+    /* margin-bottom: 150px; */
+    margin: 10px 10px 10px 10px ;
+    z-index: 5;
+
+ }  
+
+ .bar {
+    fill: red; /* changes the background */
+    height: 21px;
+    transition: fill .3s ease;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+  }
+.bar text {
+    color: black;
+  }
+.bar:hover,
+.bar:focus {
+    fill: black;
+  }
+.bar:hover text,
+.bar:focus text {
+    fill: red;
+  }
+
+#loginForm{
+    background-color:#e9f4fb;
+    width: 100vw;
+  }
+
+.buttonVir {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #a258b8;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1vw;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 10vw;
+  height: 2vh;
+}
+
+.buttonVir:hover,
+.buttonVir:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.buttonVir:hover {
+  transform: translateY(-1px);
+}
+
+.buttonVir:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.deletePost {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 10vw;
+    height: 2vh;
+  }
+  
+  .deletePost:hover,
+  .deletePost:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .deletePost:hover {
+    transform: translateY(-1px);
+  }
+  
+  .deletePost:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+  }
+
+.homepageTitleContainer{
+    background-color:#A258B8;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    height: 5%;
+}
+
+.homepageVideoContainer{
+    position: absolute;
+    left: 20vw;
+    bottom: 20vh;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap:  wrap;
+    gap: 10px 20px;
+    width: 60%;
+    height: 50%;
+
+}
+
+.homepageVideoDiv{
+    background-color: Black;
+    overflow: hidden;
+    display:inline-block;
+    width: 10vw;
+    height: 10vh;
+}
+
+.videoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 10vw;
+}
+
+.viewBody{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.viewButtons{
+
+    display: flex;
+}
+
+.viewComments{
+
+}
+
+.commentContent{
+    color: black;
+}
+
+.commentElement{
+    margin-top: 10px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.viewTitle{
+    display: flex;
+    justify-content: center;
+}
+#commentText{
+    height: 10vh;
+}
+
+#commentPost{
+    width: 10vw;
+    margin-top: 2vh;
+}
+
+.viewDesc{
+    width: 60vw;
+}
+
+.commentForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.searchContent{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+}
+
+.searchvideo-title{
+    font-size: 2vw;
+}
+
+.video-title{
+    font-size: 1vw;
+}
+
+.description{
+    color: black;
+    font-size: 1vw;
+}
+
+.searchVideoElement{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+    margin-left: 2vw;
+}
+
+#studioButton{
+    margin-left: 2vw;
+}
+
+.trendingElement{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trendingContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepageTitle{
+    color: white;
+    font-size: 3vw;
+}
+
+  
+  .box {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+  }
+  
+  .box select {
+    background-color: #A258B8;
+    color: white;
+    padding: 12px;
+    width: 20vw;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .box::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .box select option {
+    padding: 30px;
+  }
+
+  .usercontain{
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contain{
+    display: flex;
+    flex-direction: row;
+  }
+
+.userText{
+    font-size: 20vw;
+}
+
+#aboutlogin{
+    margin-left: 30vw;
+    margin-top: 2vh;
+}
+
+.aboutimage{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imageContainer{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 70%;
+}

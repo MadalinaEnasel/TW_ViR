@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>W3Schools Home Page</title>
+    <link>https://www.w3schools.com</link>
+    <description>Free web building tutorials</description>
+    <item>
+      <title>New user</title>
+      <link>/dailyvir</link>
+      <description>DailyViR joined our community!</description>
+    </item>
+    <item>
+      <title>New comment</title>
+      <link>/dailyvir/videos/view/715841302</link>
+      <description>admin commented on a video!</description>
+    </item>
+  <item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>test commented on a video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/722597163</link><description>admin posted a new video!</description></item><item><title>New user</title><link>/dailyvir</link><description>rss joined our community!</description></item><item><title>New video</title><link>/dailyvir/videos/view/722597163</link><description>rss posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/713742301</link><description>rss posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/716651419</link><description>rss posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/701954773</link><description>rss posted a new video!</description></item><item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>admin commented on a video!</description></item><item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>admin commented on a video!</description></item><item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>admin commented on a video!</description></item><item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>admin commented on a video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/250959576</link><description>DailyViR posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/720569971</link><description>DailyViR posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/719182720</link><description>DailyViR posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/673215931</link><description>DailyViR posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/665179690</link><description>DailyViR posted a new video!</description></item><item><title>New video</title><link>/dailyvir/videos/view/447067692</link><description>DailyViR posted a new video!</description></item><item><title>New comment</title><link>/dailyvir/videos/view/715841302</link><description>DailyViR commented on a video!</description></item><item><title>New user</title><link>/dailyvir</link><description>DailyViR1 joined our community!</description></item></channel>
+</rss>
